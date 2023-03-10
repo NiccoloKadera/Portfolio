@@ -117,7 +117,8 @@ h2 {
     margin-top: -2em;
     pointer-events: auto;
     color: var(--orange);
-    animation: disolve 1s calc(var(--InitialDelay) + 2s) both;
+    animation: disolve 1s calc(var(--InitialDelay) + 2s) both,
+    textPop1 3s 4s infinite;
     transition: 1s;
 }
 
@@ -129,9 +130,10 @@ h2 {
 #FirstProfession {
     margin-left: 2em;
     pointer-events: auto;
-    margin-top: -1.65em;
+    margin-top: -1.7em;
     color: var(--green);
-    animation: disolve 1s calc(var(--InitialDelay) + 2.4s) both;
+    animation: disolve 1s calc(var(--InitialDelay) + 2.4s) both,
+    textPop2 3s 4s infinite;
     transition: 1s;
 }
 
@@ -144,7 +146,8 @@ h2 {
     margin-top: -2em;
     pointer-events: auto;
     color: var(--blue);
-    animation: disolve 1s calc(var(--InitialDelay) + 2.8s) both;
+    animation: disolve 1s calc(var(--InitialDelay) + 2.8s) both,
+    textPop3 3s 4s infinite;
     transition: 1s;
 }
 
@@ -198,6 +201,31 @@ h2 {
     from {opacity: 1;}
     to {opacity: 0;
         transform: scale(0.8);}
+}
+
+@keyframes textPop1 {
+    0% {font-size: 1em;
+    }
+    15% {font-size: 1.1em;
+    }
+    30% {font-size: 1em;
+    }
+}
+@keyframes textPop2 {
+    35% {font-size: 1em;
+    }
+    50% {font-size: 1.1em;
+    }
+    65% {font-size: 1em;
+    }
+}
+@keyframes textPop3 {
+    70% {font-size: 1em;
+    }
+    85% {font-size: 1.1em;
+    }
+    100% {font-size: 1em;
+    }
 }
 
 
