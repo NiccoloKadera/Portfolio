@@ -19,6 +19,7 @@
     --FontSizeH2: 3em;
     --FontSizeText: 1em;
     --InitialDelay: 2s;
+    --PointerEffects: none;
   }
 
 html {
@@ -228,10 +229,11 @@ h2 {
 
 
 
-
-
-
-
+@media screen and (max-width: 1000px) {
+    #titleSectionContainer {
+        pointer-events: auto;
+    }
+}
 
 
 
