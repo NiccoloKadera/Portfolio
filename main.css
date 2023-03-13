@@ -9,7 +9,8 @@
     --orange: rgb(228, 133, 31);
     --yellow: rgb(236, 185, 46);
     --black: rgb(0, 0, 0);
-    --white: rgb(233 233 233);
+    --white: rgb(233, 233, 233);
+    --whiteNotFull: rgb(233, 233, 233, 0.8);
     --FontName: 'Noto Sans Lao';
     --FontFamily: sans-serif;
     --FontWheight-ExtraBold: 800;
@@ -52,6 +53,9 @@ body {
 spline-viewer {
     height: 100dvh;
     animation: disolve 2s 1.9s both;
+    position: fixed;
+    top: 0;
+    z-index: 0;
 }
 
 
@@ -60,7 +64,7 @@ spline-viewer {
 }
 
 @keyframes HiddenDisplay {
-    from {height: 100dvh;
+    from {height: 100vh;
         overflow-y: hidden;}
     to {height: none;}
 }
@@ -72,6 +76,7 @@ spline-viewer {
 
 #StartSection {
     scroll-snap-align: start;
+    height: 100vh
 }
 
 #ThreeDBackground {
@@ -408,10 +413,11 @@ p {
     margin-right: 1em;
 }
 
-.WithLineContentContainer{
+.WithPhotoContentContainer{
     flex: 1;
     background-color: none;
     margin-left: 1em;
+    min-width: 10em;
 }
 
 
@@ -496,25 +502,68 @@ p {
     border-color: var(--blue);
 }
 
-.BgOrgange {
+.BgOrange {
     background-color: var(--orange);
 }
 
-.COrgange {
+.COrange {
     color: var(--orange);
 }
 
-.BoOrgange {
+.BoOrange {
     border-color: var(--orange);
 }
 
-.InBlock {
-    display: inline-block;
+.Mtop2 {
+    margin-top: 2em;
 }
+
+.Mtop0 {
+    margin-top: -2em;
+}
+
+.InBlockSemi {
+    display: inline-block;
+    font-weight: var(--FontWheight-SemiBold);
+}
+
 .MeInfo {
     font-family: var(--FontName), var(--FontFamily);
     font-weight: var(--FontWheight-Regular);
     font-size: var(--FontSizeP);
     margin-top: 1em;
-    min-width: 10em;
+}
+
+.spacerUp {
+    height: 8em;
+}
+
+.spacerDown {
+    height: 5em;
+}
+
+hr {
+    border-style: dashed solid;
+    z-index: 10;
+}
+
+.Blur{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100vh;
+    background-color: var(--whiteNotFull);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+}
+
+.OpZero {
+    opacity: 0;
+    transition: 1s;
+}
+
+.OpOne {
+    opacity: 1;
+    transition: 1s;
 }

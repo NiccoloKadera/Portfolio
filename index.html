@@ -9,6 +9,7 @@
         <title>NK - Portfolio</title> <! -- Titolo finestra. -->
         <link rel="icon" href="Img/Me.jpeg" title="image/x-icon"> <! -- Icona in alto. -->
         <link rel="stylesheet" href="main.css" type="text/css"> <! -- Link a file css. -->
+        <script src="BlurrEditor.js" defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -16,9 +17,10 @@
     </head>
     <body>
     <div class="PageContentContainer">
-        <section style="" id="#StartSection">
-            <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.259/build/spline-viewer.js"></script>
-            <spline-viewer url="https://prod.spline.design/DuqIDHKnSMB8XrD4/scene.splinecode"></spline-viewer>
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.259/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/DuqIDHKnSMB8XrD4/scene.splinecode"></spline-viewer>
+        <div class="Blur OpZero" id="BgBlurr"></div>
+        <section style="" id="StartSection">
             <div class="sectionContainer" id="titleSectionContainer" id="StartSection">
                 <div id="NameContainer"><h1 id="Name">Niccolò Kadera</h1></div>
                 <h2><div id="ZeroProfession">I'm</div><div id="FirstProfession">a student</div><br><div id="SecondProfession">& developper</div></h2>
@@ -27,6 +29,9 @@
             <div id="Loading" class="notification">Loading...</div>
         </section>
         <section style="">
+                <div class="spacerUp"></div>
+                <hr>
+                <div class="spacerDown"></div>
             <div class="sectionContainer">
                 <h2 class="CGreen">Formation</h2>
                 <div class="WithLineContainer">
@@ -59,6 +64,9 @@
             </div>
         </section>
         <section style="">
+                <div class="spacerUp"></div>
+                <hr>
+                <div class="spacerDown"></div>
             <div class="sectionContainer">
                 <h2 class="CBlue">Development</h2>
                 <div class="WithLineContainer">
@@ -82,29 +90,33 @@
             </div>
         </section>
         <section style="">
+                <div class="spacerUp"></div>
+                <hr>
+                <div class="spacerDown"></div>
             <div class="sectionContainer">
-                <h2 class="COrgange">About Me</h2>
+                <h2 class="COrange">About Me</h2>
                 <div class="WithLineContainer">
                         <div class="MePhoto"></div>
                         <div class="WithLineContainer">
                         <div class="line BgOrgange"></div>
-                        <div class="WithLineContentContainer">
-                        <p class="MeInfo"><div class="COrange InBlock">Name:</div> Niccolò<br><div class="COrange InBlock">Surname:</div> Kadera<br><div class="COrange InBlock">Age:</div> 20<br><div class="COrange InBlock">Gender:</div> Male</p>
+                        <div class="WithPhotoContentContainer">
+                            <div class="MeInfo"><div class="COrange InBlock InBlockSemi">Name:</div> Niccolò<br><div class="COrange InBlock InBlockSemi">Surname:</div> Kadera<br><div class="COrange InBlock InBlockSemi">Date of birth:</div> 26/09/2002<br><div class="COrange InBlock InBlockSemi">Place of birth</div> Legnano<br><div class="COrange InBlock InBlockSemi">Gender:</div> Male</div>
                         </div>
-                            
                         </div>
-
                 </div>
-                <p class="MeInfo"><div class="COrange InBlock">Name:</div> Niccolò<br><div class="COrange InBlock">Surname:</div> Kadera<br><div class="COrange InBlock">Age:</div> 20<br><div class="COrange InBlock">Gender:</div> Male</p>
-                <h2 class="COrgange">Projects</h2>
-                <div class="WithLineContainer">
-                        <div class="line BgBlue"></div>
+
+                <div class="WithLineContainer Mtop2">
+                        <div class="line BgOrange"></div>
                         <div class="WithLineContentContainer">
-                            <h3 class="CBlue">NotOnlyDesk</h3>
-                            <p>Via Regina Elena 23, 20023 Cerro Maggiore (MI), Italia.<br>As of July 2022 I am collaborating in the development of a platform for digital services (rental of facilities via a digital platform).</p>
+                            <h3 class="COrange">Contact me</h3>
+                             <div class="MeInfo Mtop0"><div class="COrange InBlock InBlockSemi">Telephone:</div> +39 347 9920 171<br><div class="COrange InBlock InBlockSemi">Telephone 2:</div> 0331 431013<br><div class="COrange InBlock InBlockSemi">E-Mail:</div> niccolokadera@gmail.com<br></div>
                         </div>
             </div>
+                    <div class="spacerUp"></div>
+                    <hr>
+                    <div class="spacerDown"></div>
         </section>
+
     </div>
     </body>
 </html>
