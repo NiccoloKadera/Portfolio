@@ -83,7 +83,7 @@ spline-viewer {
 
 #StartSection {
     scroll-snap-align: start;
-    height: 100vh
+    height: 100dvh
 }
 
 #ThreeDBackground {
