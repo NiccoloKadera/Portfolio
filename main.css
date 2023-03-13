@@ -46,7 +46,7 @@ body {
     font-family: 'Questrial';
     scroll-behavior: smooth;
     background-color: var(--backgroundColor);
-    width: 100dvw;
+    max-width: 100dvw;
 }
 
 .spline-watermark {
@@ -591,19 +591,3 @@ hr {
     transition: 1s;
 }
 
-#BackToTop {
-    font-family: var(--FontName), var(--FontFamily);
-    position: fixed;
-    bottom: calc(var(--yMargin) + 1.25em);
-    right: calc(var(--yMargin) + 1em);
-    width: 8em;
-    transition: 1s;
-    pointer-events: auto;
-    z-index: 10;
-}
-
-.BackToTopHidden {
-    transition: 0.25s;
-    transform: translate(3em) scale(0.8);
-    opacity: 0;
-}
