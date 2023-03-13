@@ -135,7 +135,7 @@ h2 {
     pointer-events: auto;
     color: var(--orange);
     animation: disolve 1s calc(var(--InitialDelay) + 2s) both,
-    textPop1 3s 4s infinite;
+    textPop1 4s 4s infinite;
     transition: 1s;
 }
 
@@ -150,7 +150,7 @@ h2 {
     margin-top: -1.7em;
     color: var(--green);
     animation: disolve 1s calc(var(--InitialDelay) + 2.4s) both,
-    textPop2 3s 4s infinite;
+    textPop2 4s 4s infinite;
     transition: 1s;
 }
 
@@ -164,7 +164,7 @@ h2 {
     pointer-events: auto;
     color: var(--blue);
     animation: disolve 1s calc(var(--InitialDelay) + 2.8s) both,
-    textPop3 3s 4s infinite;
+    textPop3 4s 4s infinite;
     transition: 1s;
 }
 
@@ -206,6 +206,14 @@ h2 {
     animation: disolveToZero 1s calc(var(--InitialDelay) - 0.5s) both;
 }
 
+#Lang {
+    font-family: var(--FontName), var(--FontFamily);
+    position: absolute;
+    bottom: 1.25em;
+    left: 1em;
+    animation: disolveToOne 1s calc(var(--InitialDelay) + 0.5s) both;
+}
+
 #LearnMore {
     font-family: var(--FontName), var(--FontFamily);
     position: absolute;
@@ -223,25 +231,25 @@ h2 {
 @keyframes textPop1 {
     0% {font-size: 1em;
     }
-    15% {font-size: 1.1em;
+    5% {font-size: 1.1em;
     }
-    30% {font-size: 1em;
+    10% {font-size: 1em;
     }
 }
 @keyframes textPop2 {
-    35% {font-size: 1em;
+    15% {font-size: 1em;
     }
-    50% {font-size: 1.1em;
+    20% {font-size: 1.1em;
     }
-    65% {font-size: 1em;
+    25% {font-size: 1em;
     }
 }
 @keyframes textPop3 {
-    70% {font-size: 1em;
+    30% {font-size: 1em;
     }
-    85% {font-size: 1.1em;
+    35% {font-size: 1.1em;
     }
-    100% {font-size: 1em;
+    40% {font-size: 1em;
     }
 }
 
