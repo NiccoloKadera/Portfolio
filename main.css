@@ -201,6 +201,7 @@ h2 {
     padding: 0.8em 1.2em 0.8em 1.2em; 
     border-radius: 0.4em;
     text-align: center;
+    transition: 1s;
 }
 
 #Loading {
@@ -209,6 +210,7 @@ h2 {
     top: calc(100dvh - 4em - 1.25em);
     left: 1em;
     animation: disolveToZero 1s calc(var(--InitialDelay) - 0.5s) both;
+    transition: 1s;
 }
 
 #Lang {
@@ -217,6 +219,7 @@ h2 {
     top: calc(100dvh - 4em - 1.25em);
     left: 1em;
     animation: disolveToOne 1s var(--InitialDelay) both;
+    transition: 1s;
 }
 
 #LearnMore {
@@ -225,6 +228,7 @@ h2 {
     top: calc(100dvh - 4em - 1.25em);
     right: 1em;
     width: 8em;
+    transition: 1s;
 }
 
 @keyframes disolveToZero {
