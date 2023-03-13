@@ -215,10 +215,25 @@ h2 {
     width: 8em;
 }
 
+#Lang {
+    font-family: var(--FontName), var(--FontFamily);
+    position: fixed;
+    bottom: 1.25em;
+    left: 1em;
+    animation: disolveToOne 1s var(--InitialDelay) both;
+}
+
 @keyframes disolveToZero {
     from {opacity: 1;}
     to {opacity: 0;
         transform: scale(0.8);}
+}
+
+@keyframes disolveToOne {
+    from {opacity: 0;
+        transform: scale(0.8) translate(-3em);}
+    to {opacity: 1;
+        transform: scale(1) translate(0em);}
 }
 
 @keyframes textPop1 {
