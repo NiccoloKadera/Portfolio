@@ -355,7 +355,7 @@ p {
 }
 
 #JS::before {
-    content: url('img/JS.png');
+    content: url('/Portfolio/Img/JS.png');
     transform: translate(-31.8em, -1.3em) scale(0.03);
 }
 
@@ -364,7 +364,7 @@ p {
 }
 
 #HTML::before {
-    content: url('img/HTML.png');
+    content: url('/Portfolio/Img/HTML.png');
     transform: translate(-15em, -1.3em) scale(0.065);
 }
 
@@ -373,7 +373,7 @@ p {
 }
 
 #CSS::before {
-    content: url('img/CSS.png');
+    content: url('/Portfolio/Img/CSS.png');
     transform: translate(-44.4em, -1.3em) scale(0.017);
 }
 
@@ -382,7 +382,7 @@ p {
 }
 
 #Swift::before {
-    content: url('img/Swift.png');
+    content: url('/Portfolio/Img/Swift.png');
     transform: translate(-15em, -1.3em) scale(0.065);
 }
 
@@ -406,7 +406,7 @@ p {
     min-height: 10em;
     max-width: 10em;
     max-height: 10em;
-    background-image: url("Img/Me.jpeg");
+    background-image: url("/Portfolio/Img/Me.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 1em;
