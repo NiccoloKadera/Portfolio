@@ -206,7 +206,7 @@ h2 {
 #Loading {
     font-family: var(--FontName), var(--FontFamily);
     position: absolute;
-    bottom: 1.25em;
+    top: calc(100dvh - 4em - 1.25em);
     left: 1em;
     animation: disolveToZero 1s calc(var(--InitialDelay) - 0.5s) both;
 }
@@ -214,7 +214,7 @@ h2 {
 #Lang {
     font-family: var(--FontName), var(--FontFamily);
     position: absolute;
-    bottom: 1.25em;
+    top: calc(100dvh - 4em - 1.25em);
     left: 1em;
     animation: disolveToOne 1s var(--InitialDelay) both;
 }
@@ -222,7 +222,7 @@ h2 {
 #LearnMore {
     font-family: var(--FontName), var(--FontFamily);
     position: absolute;
-    bottom: 1.25em;
+    top: calc(100dvh - 4em - 1.25em);
     right: 1em;
     width: 8em;
 }
