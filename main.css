@@ -7,6 +7,9 @@
     --green: rgb(76, 183, 149);
     --blue: rgb(43, 180, 228);
     --orange: rgb(228, 133, 31);
+    --yellow: rgb(236, 185, 46);
+    --black: rgb(0, 0, 0);
+    --white: rgb(233 233 233);
     --FontName: 'Noto Sans Lao';
     --FontFamily: sans-serif;
     --FontWheight-ExtraBold: 800;
@@ -17,10 +20,18 @@
     --FontWheight-Light: 300;
     --FontSizeH1: 4em;
     --FontSizeH2: 3em;
+    --FontSizeH3: 2em;
+    --FontSizeP: 1em;
     --FontSizeText: 1em;
     --InitialDelay: 2s;
     --PointerEffects: none;
   }
+
+
+
+.CBlack {
+    color: var(--black);
+}
 
 html {
     scroll-behavior: smooth;
@@ -39,28 +50,28 @@ body {
 }
 
 spline-viewer {
+    height: 100dvh;
     animation: disolve 2s 1.9s both;
 }
 
 
 .PageContentContainer {
-    height: 100dvh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    overflow-y: none;
     animation: HiddenDisplay 1s calc(var(--InitialDelay) - 0.5s) both;
 }
 
 @keyframes HiddenDisplay {
-    from {overflow-y: hidden;}
-    to {overflow-y: none;}
+    from {height: 100dvh;
+        overflow-y: hidden;}
+    to {height: none;}
 }
 
 .PageContentContainer section {
     z-index: 2;
-    height: 100dvh;
-    scroll-snap-align: start;
     position: relative;
+}
+
+#StartSection {
+    scroll-snap-align: start;
 }
 
 #ThreeDBackground {
@@ -69,19 +80,18 @@ spline-viewer {
 
 .sectionContainer {
     width: 100dvw;
-    min-height: 100dvh;
-    position: absolute;
     top: var(--yMargin);
-    left: var(--xMargin);
-    right: var(--xMargin);
+    margin-left: var(--xMargin);
+    margin-right: var(--xMargin);
     bottom: var(--yMargin);
     width: calc(100dvw - (var(--xMargin) * 2));
-    height: calc(100dvh - (var(--yMargin) * 2));
+
     transition: 0.2s;
 }
 
 #titleSectionContainer {
-    pointer-events: none;
+    pointer-events: auto;
+    position: absolute;
 }
 
 h1 {
@@ -240,16 +250,169 @@ h2 {
 
 
 
-#InstructionTitle {
-    color: var(--green);
-}
 
 .WithLineContainer {
-    background-color: antiquewhite;
-    min-height: 30em;
+    min-height: 5em;
     position: relative;
+    display: flex;
 }
 
+.line {
+    flex: 1;
+    max-width: 1em;
+    border-radius: 2em;
+}
+
+.WithLineContentContainer{
+    flex: 1;
+    background-color: none;
+    margin-left: 1em;
+}
+
+h3 {
+    font-family: var(--FontName), var(--FontFamily);
+    font-weight: var(--FontWheight-SemiBold);
+    font-size: var(--FontSizeH3);
+    margin-top: 0em;
+}
+
+p {
+    font-family: var(--FontName), var(--FontFamily);
+    font-weight: var(--FontWheight-Regular);
+    font-size: var(--FontSizeP);
+    margin-top: -2em;
+}
+
+.StatusIndicatorContainer {
+    height: 1.5em;
+    border: 0.23em solid;
+    border-radius: 3em;
+    max-width: 40em;
+    margin-left: 0em;
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.StatusIndicator {
+    height: calc(100% - 0.25em);
+    width: calc(100% - 0.30em);
+    border-radius: 3em;
+    margin: 0.15em 0.15em 0.15em 0.15em;
+    font-size: 0.775em;
+    font-family: var(--FontName), var(--FontFamily);
+    font-weight: var(--FontWheight-Regular);
+    text-align: center;
+}
+
+.StatusIndicatorContainer::before {
+    position: absolute;
+    left: -3em;
+    height: 2em;
+}
+
+.Status50perc {
+    width: calc(50% - 0.30em);
+    background-color: var(--yellow);
+}
+
+.Status100perc {
+    width: calc(100% - 0.30em);
+    background-color: var(--green);
+}
+
+.Status25perc {
+    width: calc(25% - 0.30em);
+    background-color: var(--orange);
+}
+
+.Status75perc {
+    width: calc(75% - 0.30em);
+    background-color: var(--yellow);
+}
+
+
+
+
+
+
+
+#python {
+    margin-left: 3em;
+}
+
+#python::before {
+    content: url('img/Python.png');
+    transform: translate(-15em, -1.3em) scale(0.065);
+}
+
+#JS {
+    margin-left: 3em;
+}
+
+#JS::before {
+    content: url('img/JS.png');
+    transform: translate(-31.8em, -1.3em) scale(0.03);
+}
+
+#HTML {
+    margin-left: 3em;
+}
+
+#HTML::before {
+    content: url('img/HTML.png');
+    transform: translate(-15em, -1.3em) scale(0.065);
+}
+
+#CSS {
+    margin-left: 3em;
+}
+
+#CSS::before {
+    content: url('img/CSS.png');
+    transform: translate(-44.4em, -1.3em) scale(0.017);
+}
+
+#Swift {
+    margin-left: 3em;
+}
+
+#Swift::before {
+    content: url('img/Swift.png');
+    transform: translate(-15em, -1.3em) scale(0.065);
+}
+
+
+
+
+
+
+
+
+.WithIMGContainer {
+    background-color: antiquewhite;
+    min-height: 5em;
+    position: relative;
+    display: flex;
+}
+
+.MePhoto {
+    flex: 1;
+    min-width: 10em;
+    min-height: 10em;
+    max-width: 10em;
+    max-height: 10em;
+    background-image: url("Img/Me.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1em;
+    margin-right: 1em;
+}
+
+.WithLineContentContainer{
+    flex: 1;
+    background-color: none;
+    margin-left: 1em;
+}
 
 
 
@@ -303,4 +466,55 @@ h2 {
     :root {
         --yMargin: 0.5em;
     }
+}
+
+.BgGreen {
+    background-color: var(--green);
+}
+
+.CGreen {
+    color: var(--green);
+}
+
+.BoGreen {
+    border-color: var(--green);
+}
+
+.CWhite {
+    color: var(--white);
+}
+
+.BgBlue {
+    background-color: var(--blue);
+}
+
+.CBlue {
+    color: var(--blue);
+}
+
+.BoBlue {
+    border-color: var(--blue);
+}
+
+.BgOrgange {
+    background-color: var(--orange);
+}
+
+.COrgange {
+    color: var(--orange);
+}
+
+.BoOrgange {
+    border-color: var(--orange);
+}
+
+.InBlock {
+    display: inline-block;
+}
+.MeInfo {
+    font-family: var(--FontName), var(--FontFamily);
+    font-weight: var(--FontWheight-Regular);
+    font-size: var(--FontSizeP);
+    margin-top: 1em;
+    min-width: 10em;
 }
