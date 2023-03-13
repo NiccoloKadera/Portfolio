@@ -3,7 +3,7 @@ var blurr = document.getElementById("BgBlurr")
 
 window.addEventListener('scroll', () => {
     
-    const scrolled = window.scrollY;
+    const scrolled = window.scrollY || document.documentElement.scrollTop;
 
     if (Math.ceil(scrolled) >= 300) {
         console.log("Sotto")
