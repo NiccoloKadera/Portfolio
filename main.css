@@ -1,0 +1,580 @@
+:root {
+    --xMargin: 5em;
+    --yMargin: 3em;
+    --backgroundColor: rgb(233 233 233);
+    --NotificationColor: rgb(0, 0, 0);
+    --NotificationTextColor: rgb(255, 255, 255);
+    --green: rgb(76, 183, 149);
+    --blue: rgb(43, 180, 228);
+    --orange: rgb(228, 133, 31);
+    --yellow: rgb(236, 185, 46);
+    --black: rgb(0, 0, 0);
+    --white: rgb(233, 233, 233);
+    --whiteNotFull: rgb(233, 233, 233, 0.8);
+    --FontName: 'Noto Sans Lao';
+    --FontFamily: sans-serif;
+    --FontWheight-ExtraBold: 800;
+    --FontWheight-Bold: 700;
+    --FontWheight-SemiBold: 600;
+    --FontWheight-Medium: 500;
+    --FontWheight-Regular: 400;
+    --FontWheight-Light: 300;
+    --FontSizeH1: 4em;
+    --FontSizeH2: 3em;
+    --FontSizeH3: 2em;
+    --FontSizeP: 1em;
+    --FontSizeText: 1em;
+    --InitialDelay: 2s;
+    --PointerEffects: none;
+  }
+
+  a {
+    all: unset;
+}
+
+.CBlack {
+    color: var(--black);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Questrial';
+    scroll-behavior: smooth;
+    background-color: var(--backgroundColor);
+}
+
+.spline-watermark {
+    display: none;
+}
+
+spline-viewer {
+    height: 100dvh;
+    animation: disolve 2s 1.9s both;
+    position: fixed;
+    top: 0;
+    z-index: 0;
+    transition: 1s;
+}
+
+
+.PageContentContainer {
+    animation: HiddenDisplay 1s calc(var(--InitialDelay) - 0.5s) both;
+}
+
+@keyframes HiddenDisplay {
+    from {height: 100vh;
+        overflow-y: hidden;}
+    to {height: none;}
+}
+
+.PageContentContainer section {
+    z-index: 2;
+    position: relative;
+}
+
+#StartSection {
+    scroll-snap-align: start;
+    height: 100vh
+}
+
+#ThreeDBackground {
+    position: absolute;
+}
+
+.sectionContainer {
+    width: 100dvw;
+    top: var(--yMargin);
+    margin-left: var(--xMargin);
+    margin-right: var(--xMargin);
+    bottom: var(--yMargin);
+    width: calc(100dvw - (var(--xMargin) * 2));
+
+    transition: 0.2s;
+}
+
+#titleSectionContainer {
+    pointer-events: auto;
+    position: absolute;
+}
+
+h1 {
+    font-family: var(--FontName), var(--FontFamily);
+    font-weight: var(--FontWheight-ExtraBold);
+    font-size: var(--FontSizeH1);
+}
+
+h2 {
+    font-family: var(--FontName), var(--FontFamily);
+    font-weight: var(--FontWheight-ExtraBold);
+    font-size: var(--FontSizeH2);
+
+}
+
+#NameContainer {
+    display: inline-block;
+}
+
+#Name {
+    border-right: 0em solid;
+    pointer-events: auto;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 1s;
+    animation: 
+        typing 2.5s calc(var(--InitialDelay) + 0s) both,
+        cursor 0.4s step-end infinite alternate;
+}
+
+#ZeroProfession {
+    margin-top: -2em;
+    pointer-events: auto;
+    color: var(--orange);
+    animation: disolve 1s calc(var(--InitialDelay) + 2s) both,
+    textPop1 3s 4s infinite;
+    transition: 1s;
+}
+
+#ZeroProfession:hover {
+    font-size: 1.1em;
+    transition: 0.5s;
+}
+
+#FirstProfession {
+    margin-left: 2em;
+    pointer-events: auto;
+    margin-top: -1.7em;
+    color: var(--green);
+    animation: disolve 1s calc(var(--InitialDelay) + 2.4s) both,
+    textPop2 3s 4s infinite;
+    transition: 1s;
+}
+
+#FirstProfession:hover {
+    font-size: 1.1em;
+    transition: 0.5s;
+}
+
+#SecondProfession {
+    margin-top: -2em;
+    pointer-events: auto;
+    color: var(--blue);
+    animation: disolve 1s calc(var(--InitialDelay) + 2.8s) both,
+    textPop3 3s 4s infinite;
+    transition: 1s;
+}
+
+#SecondProfession:hover {
+    font-size: 1.1em;
+    transition: 0.5s;
+}
+
+@keyframes cursor {
+    50% {border-color: transparent;}
+}
+
+@keyframes typing {
+    0% {width: 0;
+        border-right: 0.1em solid;}
+    95% {width: 100%;
+        border-right: 0.1em solid;}
+    100% {border-right: 0em solid;}
+}
+
+@keyframes disolve {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.notification{
+    color: var(--NotificationTextColor);
+    background-color: var(--NotificationColor);
+    padding: 0.8em 1.2em 0.8em 1.2em; 
+    border-radius: 0.4em;
+    text-align: center;
+}
+
+#Loading {
+    font-family: var(--FontName), var(--FontFamily);
+    position: absolute;
+    bottom: 1.25em;
+    left: 1em;
+    animation: disolveToZero 1s calc(var(--InitialDelay) - 0.5s) both;
+}
+
+#LearnMore {
+    font-family: var(--FontName), var(--FontFamily);
+    position: fixed;
+    bottom: 1.25em;
+    right: 1em;
+    width: 8em;
+}
+
+@keyframes disolveToZero {
+    from {opacity: 1;}
+    to {opacity: 0;
+        transform: scale(0.8);}
+}
+
+@keyframes textPop1 {
+    0% {font-size: 1em;
+    }
+    15% {font-size: 1.1em;
+    }
+    30% {font-size: 1em;
+    }
+}
+@keyframes textPop2 {
+    35% {font-size: 1em;
+    }
+    50% {font-size: 1.1em;
+    }
+    65% {font-size: 1em;
+    }
+}
+@keyframes textPop3 {
+    70% {font-size: 1em;
+    }
+    85% {font-size: 1.1em;
+    }
+    100% {font-size: 1em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.WithLineContainer {
+    min-height: 5em;
+    position: relative;
+    display: flex;
+}
+
+.line {
+    flex: 1;
+    max-width: 1em;
+    border-radius: 2em;
+}
+
+.WithLineContentContainer{
+    flex: 1;
+    background-color: none;
+    margin-left: 1em;
+}
+
+h3 {
+    font-family: var(--FontName), var(--FontFamily);
+    font-weight: var(--FontWheight-SemiBold);
+    font-size: var(--FontSizeH3);
+    margin-top: 0em;
+}
+
+p {
+    font-family: var(--FontName), var(--FontFamily);
+    font-weight: var(--FontWheight-Regular);
+    font-size: var(--FontSizeP);
+    margin-top: -2em;
+}
+
+.StatusIndicatorContainer {
+    height: 1.5em;
+    border: 0.23em solid;
+    border-radius: 3em;
+    max-width: 40em;
+    margin-left: 0em;
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.StatusIndicator {
+    height: calc(100% - 0.25em);
+    width: calc(100% - 0.30em);
+    border-radius: 3em;
+    margin: 0.15em 0.15em 0.15em 0.15em;
+    font-size: 0.775em;
+    font-family: var(--FontName), var(--FontFamily);
+    font-weight: var(--FontWheight-Regular);
+    text-align: center;
+}
+
+.StatusIndicatorContainer::before {
+    position: absolute;
+    left: -3em;
+    height: 2em;
+}
+
+.Status50perc {
+    width: calc(50% - 0.30em);
+    background-color: var(--yellow);
+}
+
+.Status100perc {
+    width: calc(100% - 0.30em);
+    background-color: var(--green);
+}
+
+.Status25perc {
+    width: calc(25% - 0.30em);
+    background-color: var(--orange);
+}
+
+.Status75perc {
+    width: calc(75% - 0.30em);
+    background-color: var(--yellow);
+}
+
+
+
+
+
+
+
+#python {
+    margin-left: 3em;
+}
+
+#python::before {
+    content: url('img/Python.png');
+    transform: translate(-15em, -1.3em) scale(0.065);
+}
+
+#JS {
+    margin-left: 3em;
+}
+
+#JS::before {
+    content: url('img/JS.png');
+    transform: translate(-31.8em, -1.3em) scale(0.03);
+}
+
+#HTML {
+    margin-left: 3em;
+}
+
+#HTML::before {
+    content: url('img/HTML.png');
+    transform: translate(-15em, -1.3em) scale(0.065);
+}
+
+#CSS {
+    margin-left: 3em;
+}
+
+#CSS::before {
+    content: url('img/CSS.png');
+    transform: translate(-44.4em, -1.3em) scale(0.017);
+}
+
+#Swift {
+    margin-left: 3em;
+}
+
+#Swift::before {
+    content: url('img/Swift.png');
+    transform: translate(-15em, -1.3em) scale(0.065);
+}
+
+
+
+
+
+
+
+
+.WithIMGContainer {
+    background-color: antiquewhite;
+    min-height: 5em;
+    position: relative;
+    display: flex;
+}
+
+.MePhoto {
+    flex: 1;
+    min-width: 10em;
+    min-height: 10em;
+    max-width: 10em;
+    max-height: 10em;
+    background-image: url("Img/Me.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1em;
+    margin-right: 1em;
+}
+
+.WithPhotoContentContainer{
+    flex: 1;
+    background-color: none;
+    margin-left: 1em;
+    min-width: 10em;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+    #titleSectionContainer {
+        pointer-events: auto;
+    }
+}
+
+@media screen and (min-width: 672px) {
+
+    #MeInfoMobile{
+        display: none;
+    }
+  }
+
+@media screen and (max-width: 672px) {
+    :root {
+        --FontSizeH1: 3em;
+        --FontSizeH2: 2em;
+        --FontSizeText: 1em;
+        --xMargin: 3em;
+
+    }
+    #MeInfoDextop{
+        display: none;
+    }
+  }
+
+
+@media screen and (max-width: 470px) {
+    :root {
+        --FontSizeH1: 2.6em;
+        --FontSizeH2: 1.6em;
+        --FontSizeText: 1em;
+        --xMargin: 1.2em;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    :root {
+        --FontSizeH1: 2.3em;
+        --FontSizeH2: 1.3em;
+        --FontSizeText: 0.9em;
+        --xMargin: 0.9em;
+    }
+}
+
+@media screen and (max-height: 1000px) {
+    :root {
+        --yMargin: 1em;
+    }
+}
+@media screen and (max-height: 900px) {
+    :root {
+        --yMargin: 0.5em;
+    }
+}
+
+.BgGreen {
+    background-color: var(--green);
+}
+
+.CGreen {
+    color: var(--green);
+}
+
+.BoGreen {
+    border-color: var(--green);
+}
+
+.CWhite {
+    color: var(--white);
+}
+
+.BgBlue {
+    background-color: var(--blue);
+}
+
+.CBlue {
+    color: var(--blue);
+}
+
+.BoBlue {
+    border-color: var(--blue);
+}
+
+.BgOrange {
+    background-color: var(--orange);
+}
+
+.COrange {
+    color: var(--orange);
+}
+
+.BoOrange {
+    border-color: var(--orange);
+}
+
+.Mtop2 {
+    margin-top: 2em;
+}
+
+.Mtop0 {
+    margin-top: -2em;
+}
+
+.InBlockSemi {
+    display: inline-block;
+    font-weight: var(--FontWheight-SemiBold);
+}
+
+.MeInfo {
+    font-family: var(--FontName), var(--FontFamily);
+    font-weight: var(--FontWheight-Regular);
+    font-size: var(--FontSizeP);
+    margin-top: 1em;
+}
+
+.spacerUp {
+    height: 8em;
+}
+
+.spacerDown {
+    height: 5em;
+}
+
+hr {
+    border-style: dashed solid;
+    z-index: 10;
+}
+
+.Blur{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 120vh;
+    background-color: var(--whiteNotFull);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+}
+
+.OpZero {
+    opacity: 0;
+    transition: 1s;
+}
+
+.OpOne {
+    opacity: 1;
+    transition: 1s;
+}
