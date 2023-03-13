@@ -38,6 +38,7 @@ a {
 
 html {
     scroll-behavior: smooth;
+    width: 100dvw;
 }
 
 body {
@@ -45,8 +46,7 @@ body {
     padding: 0;
     font-family: 'Questrial';
     scroll-behavior: smooth;
-    background-color: var(--backgroundColor);
-    max-width: 100dvw;
+    background-color: var(--backgroundColor);  
 }
 
 .spline-watermark {
@@ -363,14 +363,12 @@ p {
 
 
 
-
-
 #python {
     margin-left: 3em;
 }
 
 #python::before {
-    content: url('/Portfolio/Img/Python.png');
+    content: url('img/Python.png');
     transform: translate(-15em, -1.3em) scale(0.065);
 }
 
@@ -379,7 +377,7 @@ p {
 }
 
 #JS::before {
-    content: url('/Portfolio/Img/JS.png');
+    content: url('img/JS.png');
     transform: translate(-31.8em, -1.3em) scale(0.03);
 }
 
@@ -388,7 +386,7 @@ p {
 }
 
 #HTML::before {
-    content: url('/Portfolio/Img/HTML.png');
+    content: url('img/HTML.png');
     transform: translate(-15em, -1.3em) scale(0.065);
 }
 
@@ -397,7 +395,7 @@ p {
 }
 
 #CSS::before {
-    content: url('/Portfolio/Img/CSS.png');
+    content: url('img/CSS.png');
     transform: translate(-44.4em, -1.3em) scale(0.017);
 }
 
@@ -406,10 +404,9 @@ p {
 }
 
 #Swift::before {
-    content: url('/Portfolio/Img/Swift.png');
+    content: url('img/Swift.png');
     transform: translate(-15em, -1.3em) scale(0.065);
 }
-
 
 
 
@@ -591,3 +588,19 @@ hr {
     transition: 1s;
 }
 
+#BackToTop {
+    font-family: var(--FontName), var(--FontFamily);
+    position: fixed;
+    bottom: calc(var(--yMargin) + 1.25em);
+    right: calc(var(--yMargin) + 1em);
+    width: 8em;
+    transition: 1s;
+    pointer-events: auto;
+    z-index: 10;
+}
+
+.BackToTopHidden {
+    transition: 0.25s;
+    transform: translate(3em) scale(0.8);
+    opacity: 0;
+}
