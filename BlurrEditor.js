@@ -3,7 +3,7 @@ var blurr = document.getElementById("BgBlurr")
 
 window.addEventListener('scroll', () => {
     
-    var scrolled = window.scrollY || document.documentElement.scrollTop;
+    var scrolled = document.documentElement.scrollTop;
 
     if (Math.ceil(scrolled) >= 300) {
         document.getElementById("BgBlurr").classList.remove('OpZero');
