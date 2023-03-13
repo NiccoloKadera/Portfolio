@@ -32,6 +32,10 @@ a {
     all: unset;
 }
 
+button {
+    all: unset;
+}
+
 .CBlack {
     color: var(--black);
 }
