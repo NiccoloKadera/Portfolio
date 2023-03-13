@@ -458,7 +458,7 @@ p {
 
 .BackToTopHidden {
     transition: 0.25s;
-    transform: translate(10em) scale(0.4);
+    transform: translate(20em) scale(0.4);
     opacity: 0;
 }
 
