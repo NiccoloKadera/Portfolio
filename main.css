@@ -85,8 +85,7 @@ spline-viewer {
 
 #StartSection {
     min-height:40em;
-    height: 100dvh;
-    transition: 1s;
+    height: 100vh;
 }
 
 #ThreeDBackground {
