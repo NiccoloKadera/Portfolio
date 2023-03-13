@@ -6,7 +6,6 @@ window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
 
     if (Math.ceil(scrolled) >= 300) {
-        console.log("Sotto")
         document.getElementById("BgBlurr").classList.remove('OpZero');
         document.getElementById("BgBlurr").classList.add('OpOne');
         document.getElementById("BackToTop").classList.remove('BackToTopHidden');
