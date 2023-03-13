@@ -18,3 +18,12 @@ window.addEventListener('scroll', () => {
     
 
 });
+
+var lowEnergyButton = document.querySelectorAll("[data-pulsanteRisparmio]")
+
+lowEnergyButton.forEach(button => {
+    button.addEventListener("click", e => {
+        console.log("Cadss")
+        document.getElementById("SplineVisual").style.display = "none";
+    })
+})
