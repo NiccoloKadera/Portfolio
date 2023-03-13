@@ -56,8 +56,9 @@ body {
 
 spline-viewer {
     height: 100dvh;
-    width: calc(100dvw + 20em);
-    left: -10em;
+    height: 100dvh;
+    width: 200dvw;
+    left: -50dvw;
     animation: disolve 2s 1.9s both;
     position: fixed;
     top: 0;
