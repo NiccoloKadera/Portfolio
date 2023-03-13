@@ -48,6 +48,7 @@ body {
 
 .spline-watermark {
     display: none;
+    transform: translate(50em);
 }
 
 spline-viewer {
@@ -60,6 +61,7 @@ spline-viewer {
     z-index: 0;
     transition: 1s;
 }
+
 
 .PageContentContainer {
     animation: HiddenDisplay 1s calc(var(--InitialDelay) - 0.5s) both;
@@ -228,6 +230,13 @@ h2 {
         transform: scale(0.8);}
 }
 
+@keyframes disolveToOne {
+    from {opacity: 0;
+        transform: scale(0.8);}
+    to {opacity: 1;
+        transform: scale(1);}
+}
+
 @keyframes textPop1 {
     0% {font-size: 1em;
     }
@@ -365,7 +374,7 @@ p {
 }
 
 #JS::before {
-    content: url('/Portfolio/Img/JS.png');
+    content: url('img/JS.png');
     transform: translate(-31.8em, -1.3em) scale(0.03);
 }
 
@@ -374,7 +383,7 @@ p {
 }
 
 #HTML::before {
-    content: url('/Portfolio/Img/HTML.png');
+    content: url('img/HTML.png');
     transform: translate(-15em, -1.3em) scale(0.065);
 }
 
@@ -383,7 +392,7 @@ p {
 }
 
 #CSS::before {
-    content: url('/Portfolio/Img/CSS.png');
+    content: url('img/CSS.png');
     transform: translate(-44.4em, -1.3em) scale(0.017);
 }
 
@@ -392,7 +401,7 @@ p {
 }
 
 #Swift::before {
-    content: url('/Portfolio/Img/Swift.png');
+    content: url('img/Swift.png');
     transform: translate(-15em, -1.3em) scale(0.065);
 }
 
@@ -416,7 +425,7 @@ p {
     min-height: 10em;
     max-width: 10em;
     max-height: 10em;
-    background-image: url("/Portfolio/Img/Me.jpeg");
+    background-image: url("Img/Me.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 1em;
@@ -429,7 +438,6 @@ p {
     margin-left: 1em;
     min-width: 10em;
 }
-
 
 
 
@@ -528,9 +536,7 @@ p {
     margin-top: 2em;
 }
 
-.Mtop0 {
-    margin-top: -2em;
-}
+
 
 .InBlockSemi {
     display: inline-block;
@@ -542,6 +548,7 @@ p {
     font-weight: var(--FontWheight-Regular);
     font-size: var(--FontSizeP);
     margin-top: 1em;
+    min-width: 20em;
 }
 
 .spacerUp {
@@ -562,7 +569,7 @@ hr {
     top: 0;
     left: 0;
     width: 100dvw;
-    height: 100vh;
+    height: 120vh;
     background-color: var(--whiteNotFull);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
