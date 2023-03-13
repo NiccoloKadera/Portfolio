@@ -52,13 +52,14 @@ body {
 
 spline-viewer {
     height: 100dvh;
+    width: 140%;
+    left: -20%;
     animation: disolve 2s 1.9s both;
     position: fixed;
     top: 0;
     z-index: 0;
     transition: 1s;
 }
-
 
 .PageContentContainer {
     animation: HiddenDisplay 1s calc(var(--InitialDelay) - 0.5s) both;
