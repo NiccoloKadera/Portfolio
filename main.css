@@ -51,11 +51,12 @@ body {
 }
 
 spline-viewer {
-    height: 100vh;
+    height: 100dvh;
     animation: disolve 2s 1.9s both;
     position: fixed;
     top: 0;
     z-index: 0;
+    transition: 1s;
 }
 
 
