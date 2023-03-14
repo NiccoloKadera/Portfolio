@@ -251,10 +251,34 @@ h2 {
 
 #Lang {
     font-family: var(--FontName), var(--FontFamily);
-    position: absolute;
-    bottom: 0.7em;
-    left: 0em;
+    position: fixed;
+    bottom: 1.25em;
+    left: 1em;
     animation: disolveToOne 1s var(--InitialDelay) both;
+}
+
+#InputLangITA {
+    font-family: var(--FontName), var(--FontFamily);
+    position: fixed;
+    bottom: 1.25em;
+    left: 1em;
+    width: 5em;
+    pointer-events: auto;
+    height: 3.5em;
+    z-index: 10;
+    background-color: none;
+}
+
+#InputLangENG {
+    font-family: var(--FontName), var(--FontFamily);
+    position: fixed;
+    bottom: 1.25em;
+    left: 1em;
+    width: 5em;
+    pointer-events: auto;
+    height: 3.5em;
+    z-index: 10;
+    background-color: none;
 }
 
 @keyframes disolveToZero {
@@ -520,9 +544,6 @@ p {
     }
     p {
         margin-top: -1em;
-    }
-    #Lang {
-        margin-bottom: 2em;
     }
 }
 
