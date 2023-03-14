@@ -18,6 +18,6 @@ window.addEventListener('scroll', () => {
     const scrolled2 =  document.body.scrollTop
     const scrolled3 = window.pageYOffset
 
-    document.getElementById("LearnMore").innerHTML = (scrolled + " " + scrolled2 + " " + scrolled3)
+    document.getElementById("LearnMore").innerHTML = (Math.ceil(scrolled) + " " + Math.ceil(scrolled2) + " " + Math.ceil(scrolled3))
     
 });
