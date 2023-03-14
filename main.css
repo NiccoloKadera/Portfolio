@@ -464,6 +464,23 @@ p {
     transform: translate(-15em, -1.3em) scale(0.065);
 }
 
+#inventor {
+    margin-left: 3em;
+}
+
+#inventor::before {
+    content: url('img/Inventor.png');
+    transform: translate(-11.1em, -1.1em) scale(0.065);
+}
+
+#blender {
+    margin-left: 3em;
+}
+
+#blender::before {
+    content: url('img/Blender.png');
+    transform: translate(-77em, -1.3em) scale(0.015);
+}
 
 
 
