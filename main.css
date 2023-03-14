@@ -175,7 +175,7 @@ h2 {
     margin-top: -1.65em;
     color: var(--green);
     animation: disolve 1s calc(var(--InitialDelay) + 2.4s) both,
-    textPop2 4s 4s infinite;
+    textPop2 3s 4s infinite;
     transition: 1s;
 }
 
