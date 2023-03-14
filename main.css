@@ -494,7 +494,7 @@ p {
     flex: 1;
     background-color: none;
     margin-left: 1em;
-    min-width: 20em;
+    min-width: 100%;
 }
 
 
