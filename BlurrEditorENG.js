@@ -43,5 +43,5 @@ InputBG.addEventListener("click", e => {
 })
 
 InputENG.addEventListener("click", e => {
-    window.location.href = "/index.html";
+    window.location.href = "/Portfolio/index.html";
 })
