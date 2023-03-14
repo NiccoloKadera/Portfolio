@@ -62,7 +62,7 @@ spline-viewer {
 }
 
 .ImgBackground {
-    height: 100dvh;
+    height: 100%;
     width: 100%;
     position: fixed;
     animation: disolve 2s 0.5s both;
