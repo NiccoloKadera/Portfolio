@@ -510,7 +510,12 @@ p {
 }
 
 @media screen and (min-width: 672px) {
-
+    .centerContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
     #MeInfoMobile{
         display: none;
     }
@@ -660,11 +665,4 @@ hr {
 .OpOne {
     opacity: 1;
     transition: 1s;
-}
-
-.centerContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
 }
