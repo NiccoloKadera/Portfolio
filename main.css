@@ -495,6 +495,9 @@ p {
     #MeInfoDextop{
         display: none;
     }
+    p {
+        margin-top: -1.5em;
+    }
   }
 
 
@@ -505,6 +508,9 @@ p {
         --FontSizeText: 1em;
         --FontSizeH3: 1.3em;
         --xMargin: 1.2em;
+    }
+    p {
+        margin-top: -1em;
     }
 }
 
