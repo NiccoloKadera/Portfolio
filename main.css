@@ -495,7 +495,7 @@ p {
     flex: 1;
     background-color: none;
     margin-left: 1em;
-    min-width: 12em;
+    min-width: 20em;
 }
 
 
@@ -530,6 +530,9 @@ p {
         --FontSizeH3: 1.5em;
         --xMargin: 3em;
 
+    }
+    .WithPhotoContentContainer {
+        min-width: 10em;
     }
     #MeInfoDextop{
         display: none;
