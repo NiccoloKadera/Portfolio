@@ -168,6 +168,16 @@ h2 {
     transition: 1s;
 }
 
+#FirstProfessionITA {
+    margin-left: 2.8em;
+    pointer-events: auto;
+    margin-top: -1.65em;
+    color: var(--green);
+    animation: disolve 1s calc(var(--InitialDelay) + 2.4s) both,
+    textPop2 4s 4s infinite;
+    transition: 1s;
+}
+
 #FirstProfession:hover {
     font-size: 1.1em;
     transition: 0.5s;
