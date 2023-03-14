@@ -580,16 +580,12 @@ hr {
     width: 100dvw;
     height: 120vh;
     background-color: var(--whiteNotFull);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
 }
 
 .OpZero {
     opacity: 0;
-    transition: 1s;
 }
 
 .OpOne {
     opacity: 1;
-    transition: 1s;
 }
