@@ -61,6 +61,19 @@ spline-viewer {
     transition: 1s;
 }
 
+.ImgBackground {
+    height: 100dvh;
+    width: 100%;
+    position: fixed;
+    animation: disolve 2s 0.5s both;
+    top: 0;
+    z-index: 0;
+    transition: 1s;
+    background-image: url("CropBgImg.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+}
 
 .PageContentContainer {
     animation: HiddenDisplay 1s calc(var(--InitialDelay) - 0.5s) both;
@@ -213,6 +226,17 @@ h2 {
     bottom: 1.25em;
     right: 1em;
     width: 10em;
+}
+
+#InputMode {
+    font-family: var(--FontName), var(--FontFamily);
+    position: fixed;
+    bottom: 1.25em;
+    right: 1em;
+    width: 12.5em;
+    pointer-events: auto;
+    height: 3.5em;
+    z-index: 10;
 }
 
 #Lang {
