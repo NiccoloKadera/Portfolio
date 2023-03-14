@@ -38,8 +38,8 @@ InputBG.addEventListener("click", e => {
         document.getElementById("Loading").style.display = "block"
         document.getElementById("ImgBackgroundId").style.display = "none"
     }
-    console.log(Backgoud, BackgoudTxt)
-    document.getElementById("LearnMore").innerHTML = "Low powe mode: " + BackgoudTxt
+
+    document.getElementById("LearnMore").innerHTML = "Low power mode: " + BackgoudTxt
 })
 
 InputENG.addEventListener("click", e => {
