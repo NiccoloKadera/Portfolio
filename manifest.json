@@ -1,0 +1,35 @@
+{
+    "name": "Niccolò Kadera",
+    "short_name": "NK",
+    "start_url": "/?home=true",
+    "icons": [
+      {
+        "src": "Img/PWA/manifest-icon-192.maskable.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "Img/PWA/manifest-icon-192.maskable.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "Img/PWA/manifest-icon-512.maskable.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "Img/PWA/manifest-icon-512.maskable.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      }
+    ],
+    "theme_color": "#E9E9E9",
+    "background_color": "#E9E9E9",
+    "display": "fullscreen",
+    "orientation": "portrait"
+}
