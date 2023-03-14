@@ -252,8 +252,8 @@ h2 {
 #Lang {
     font-family: var(--FontName), var(--FontFamily);
     position: absolute;
-    bottom: 1.25em;
-    left: 1em;
+    bottom: 0.7em;
+    left: 0em;
     animation: disolveToOne 1s var(--InitialDelay) both;
 }
 
@@ -520,6 +520,9 @@ p {
     }
     p {
         margin-top: -1em;
+    }
+    #Lang {
+        bottom: 2em;
     }
 }
 
