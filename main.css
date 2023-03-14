@@ -71,6 +71,7 @@ spline-viewer {
     transition: 1s;
     background-image: url("/Portfolio/Img/CropBgImg.webp");
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     display: none;
 }
