@@ -235,7 +235,7 @@ h2 {
     position: fixed;
     bottom: 1.25em;
     right: 1em;
-    width: 10em;
+    width: 11em;
 }
 
 #InputMode {
@@ -494,7 +494,7 @@ p {
     flex: 1;
     background-color: none;
     margin-left: 1em;
-    min-width: 10em;
+    min-width: 20em;
 }
 
 
