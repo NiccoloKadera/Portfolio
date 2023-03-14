@@ -361,7 +361,7 @@ h3 {
 p {
     font-family: var(--FontName), var(--FontFamily);
     font-weight: var(--FontWheight-Regular);
-    font-size: var(--FontSizeP);
+    font-size: var(--FontSizeText);
     color: (var(--black));
     margin-top: -2em;
 }
