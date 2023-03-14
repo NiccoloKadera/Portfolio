@@ -462,6 +462,7 @@ p {
         --FontSizeH1: 3em;
         --FontSizeH2: 2em;
         --FontSizeText: 1em;
+        --FontSizeH3: 1.5em;
         --xMargin: 3em;
 
     }
@@ -476,6 +477,7 @@ p {
         --FontSizeH1: 2.6em;
         --FontSizeH2: 1.6em;
         --FontSizeText: 1em;
+        --FontSizeH3: 1.3em;
         --xMargin: 1.2em;
     }
 }
@@ -485,6 +487,7 @@ p {
         --FontSizeH1: 2.3em;
         --FontSizeH2: 1.3em;
         --FontSizeText: 0.9em;
+        --FontSizeH3: 1.1em;
         --xMargin: 0.9em;
     }
 }
