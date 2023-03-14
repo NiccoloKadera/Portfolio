@@ -1,3 +1,4 @@
+
 importScripts(
     'https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js'
   );
@@ -7,11 +8,12 @@ workbox.routing.registerRoute(
     new workbox.strategies.CacheFirst()
 );
 
+
 // Change this to your repository name
 var GHPATH = '/Portfolio';
  
 // Choose a different app prefix name
-var APP_PREFIX = 'nB';
+var APP_PREFIX = 'NK';
  
 // The version of the cache. Every time you change any of the files
 // you need to change this version (version_01, version_02…). 
