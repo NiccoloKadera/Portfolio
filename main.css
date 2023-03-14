@@ -577,7 +577,7 @@ hr {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 30em;
     height: 30em;
     background-color: var(--whiteNotFull);
 }
