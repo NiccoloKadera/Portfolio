@@ -494,7 +494,7 @@ p {
     flex: 1;
     background-color: none;
     margin-left: 1em;
-    min-width: 100%;
+    min-width: 10em;
 }
 
 
@@ -666,5 +666,5 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 100dvw;
 }
