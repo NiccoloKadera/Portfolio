@@ -15,5 +15,10 @@ window.addEventListener('scroll', () => {
         document.getElementById("BgBlurr").classList.add('OpZero');
     }
     
+    const scrolled2 =  document.body.scrollTop
+    const scrolled3 = window.pageYOffset
+
+    document.getElementById("LearnMore").innerHTML = (scrolled + " " + scrolled2 + " " + scrolled3)
+
 
 });
