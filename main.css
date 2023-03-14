@@ -536,6 +536,9 @@ p {
     p {
         margin-top: -1.5em;
     }
+    .notification {
+        padding: 0.7em 1em 0.7em 1em; 
+    }
   }
 
 
