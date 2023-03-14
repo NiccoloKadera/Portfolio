@@ -577,15 +577,19 @@ hr {
     position: fixed;
     top: 0;
     left: 0;
-    width: 30em;
-    height: 30em;
+    width: 100%;
+    height: 120%;
     background-color: var(--whiteNotFull);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
 }
 
 .OpZero {
     opacity: 0;
+    transition: 1s;
 }
 
 .OpOne {
     opacity: 1;
+    transition: 1s;
 }
