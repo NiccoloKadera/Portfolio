@@ -80,7 +80,7 @@ spline-viewer {
 }
 
 @keyframes HiddenDisplay {
-    from {height: 100vh;
+    from {height: 100dvh;
         overflow-y: hidden;}
     to {height: none;}
 }
