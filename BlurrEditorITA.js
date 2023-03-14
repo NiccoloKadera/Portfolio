@@ -43,5 +43,5 @@ InputBG.addEventListener("click", e => {
 })
 
 InputITA.addEventListener("click", e => {
-    window.location.href = "/indexEng.html";
+    window.location.href = "/Portfolio/indexEng.html";
 })
