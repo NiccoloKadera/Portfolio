@@ -582,7 +582,6 @@ hr {
     background-color: var(--whiteNotFull);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
-    z-index: 10;
 }
 
 .OpZero {
