@@ -366,6 +366,10 @@ p {
     margin-top: -2em;
 }
 
+ul {
+    margin-top: -1em;
+}
+
 .StatusIndicatorContainer {
     height: 1.5em;
     border: 0.23em solid;
