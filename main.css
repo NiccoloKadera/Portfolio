@@ -536,7 +536,6 @@ p {
     }
     #MeInfoMobile{
         display: none;
-        margin-top: 1em;
     }
   }
 
@@ -554,6 +553,9 @@ p {
     }
     #MeInfoDextop{
         display: none;
+    }
+    #MeInfoMobile{
+        margin-top: 1em;
     }
     p {
         margin-top: -1.5em;
