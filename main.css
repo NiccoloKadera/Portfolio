@@ -580,6 +580,9 @@ p {
     p {
         margin-top: -1em;
     }
+    .WithPhotoContentContainer {
+        min-width: 5em;
+    }
 }
 
 @media screen and (max-width: 365px) {
@@ -595,6 +598,9 @@ p {
     }
     .Status50perc {
         width: calc(60% - 0.30em);
+    }
+    .notification {
+        padding: 0.5em 0.8em 0.5em 0.8em; 
     }
 }
 
