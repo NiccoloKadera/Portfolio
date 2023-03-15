@@ -482,6 +482,32 @@ p {
     transform: translate(-77em, -1.3em) scale(0.015);
 }
 
+#ItaSpokenLang {
+    margin-left: 3em;
+}
+
+#ItaSpokenLang::before {
+    content: "🇮🇹";
+    transform: translate(0em, 0em) scale(2);
+}
+
+#EngSpokenLang {
+    margin-left: 3em;
+}
+
+#EngSpokenLang::before {
+    content: "🇬🇧";
+    transform: translate(0em, 0em) scale(2);
+}
+
+#FraSpokenLang {
+    margin-left: 3em;
+}
+
+#FraSpokenLang::before {
+    content: "🇫🇷";
+    transform: translate(0em, 0em) scale(2);
+}
 
 
 
