@@ -551,6 +551,9 @@ p {
     .WithPhotoContentContainer {
         min-width: 10em;
     }
+    .Status25perc {
+        width: calc(30% - 0.30em);
+    }
     #MeInfoDextop{
         display: none;
     }
@@ -586,6 +589,12 @@ p {
         --FontSizeText: 0.9em;
         --FontSizeH3: 1.1em;
         --xMargin: 0.9em;
+    }
+    .Status25perc {
+        width: calc(40% - 0.30em);
+    }
+    .Status50perc {
+        width: calc(60% - 0.30em);
     }
 }
 
