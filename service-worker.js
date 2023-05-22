@@ -10,7 +10,7 @@ workbox.routing.registerRoute(
 
 
 // Change this to your repository name
-var GHPATH = '/Portfolio';
+var GHPATH = '/Portfolio/';
  
 // Choose a different app prefix name
 var APP_PREFIX = 'NK';
