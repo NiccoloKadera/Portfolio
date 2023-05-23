@@ -7,7 +7,6 @@ workbox.routing.registerRoute(
     new workbox.strategies.CacheFirst()
 );
 
-
 // Change this to your repository name
 var GHPATH = '/Portfolio';
  
