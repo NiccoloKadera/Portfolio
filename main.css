@@ -760,12 +760,23 @@ hr {
         transform: scale(1.2) translate(-42.5%, 0em);
         transition: 0.2s;
     }
+    #BackToTop:hover #backToTopArrow{
+        transform: scale(1.2) rotate(270deg);
+        transform: rotate(270deg) scale(1.5);
+        transition: 0.3s;
+    }
 }
 
 #BackToTop:active {
     transform: scale(0.9) translate(-55%, 0em);
     transition: 0.2s;
     opacity: 0.8;
+}
+
+#BackToTop:active #backToTopArrow{
+    transform: scale(1.2) rotate(270deg);
+    transform: rotate(270deg) scale(0.8);
+    transition: 0.3s;
 }
 
 .BackToTopVisible {
@@ -783,3 +794,14 @@ hr {
     transform: rotate(270deg);
 }
 
+#backToTopArrow {
+    transition: 0.75s;
+}
+
+
+
+@keyframes backToTopArrowPop {
+    0% {transform: rotate(270deg) scale(1);}
+    50% {transform: rotate(270deg) scale(1.5);}
+    100% {transform: rotate(270deg) scale(1);}
+}
