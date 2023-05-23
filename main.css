@@ -746,3 +746,40 @@ hr {
 .Underline {
     text-decoration: underline;
 }
+
+#BackToTop {
+    width: 1em;
+    z-index: 100;
+    position: fixed;
+    left: 50%;
+    transition: 0.5s;
+}
+
+@media screen and (min-width: 1000px) {
+    #BackToTop:hover {
+        transform: scale(1.2) translate(-42.5%, 0em);
+        transition: 0.2s;
+    }
+}
+
+#BackToTop:active {
+    transform: scale(0.9) translate(-55%, 0em);
+    transition: 0.2s;
+    opacity: 0.8;
+}
+
+.BackToTopVisible {
+    bottom: 1.5em;
+    transform: scale(1) translate(-50%, 0em);
+}
+
+.BackToTopHidden {
+    bottom: -2em;
+    transform: scale(2, 0.01) translate(-25%, 0em);
+
+}
+
+.roteate90 {
+    transform: rotate(270deg);
+}
+
