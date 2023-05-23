@@ -1,7 +1,7 @@
 {
     "name": "Niccolò Kadera",
     "short_name": "NK",
-    "start_url": "/?home=true",
+    "start_url": "/Portfolio/",
     "icons": [
       {
         "src": "Img/PWA/manifest-icon-192.maskable.png",
