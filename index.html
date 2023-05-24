@@ -21,17 +21,18 @@
         <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.259/build/spline-viewer.js"></script>
         <spline-viewer id="AnimatedBackground" url="https://prod.spline.design/DuqIDHKnSMB8XrD4/scene.splinecode"></spline-viewer>
         <div class="ImgBackground" id="ImgBackgroundId"></div>
+        <hr class="startScrollAlign firstSnapScrollHR">
         <div id="LearnMore" class="notification"><a href="#FormationSection">Basse prestazioni: off</a></div>
         <div class="" id="InputMode"><a href="#FormationSection"></a></div>
         <div id="Lang" class="notification"><a href="indexEng.html">Eng</a></div>
-        <a href="#"><div id="BackToTop" class="notification BackToTopHidden"><div class="roteate90" id="backToTopArrow">&#x279C;</div></div></a>
+        <a href="#"><button id="BackToTop" class="notification BackToTopHidden"><div class="roteate90" id="backToTopArrow">&#x279C;</div></button></a>
         <div class="" id="InputLangITA"></div>
         <div id="Loading" class="notification">Caricamento...</div>
         <div class="Blur OpZero" id="BgBlurr"></div>
         <div class="header headerUnactive" id="HeaderID">
-            <a href="#AboutMeSection" class="headerElement" id="ZeroProfessionHeader">Sono</a>
-            <a href="#FormationSection" class="headerElement" id="FirstProfessionHeader">uno studente</a>
-            <a href="#DevelopperSection" class="headerElement" id="SecondProfessionHeader">& sviluppatore</a>
+            <a href="#AboutMeSection" class="headerElement" id="ZeroProfessionHeader"><button>Sono</button></a>
+            <a href="#FormationSection" class="headerElement" id="FirstProfessionHeader"><button>uno studente</button></a>
+            <a href="#DevelopperSection" class="headerElement" id="SecondProfessionHeader"><button>& sviluppatore</button></a>
         </div>
         <section style="" id="StartSection">
             <div class="sectionContainer" id="titleSectionContainer" id="StartSection">
@@ -41,9 +42,10 @@
         </section>
         <section style="BlurSect" id="FormationSection">
                 <div class="spacerUp"></div>
-                <hr>
+                <hr class="startScrollAlign">
                 <div class="spacerDown"></div>
-            <div class="sectionContainer">
+            <div class="flexBoxCenter">
+            <div class="sectionContainer maxWidt60Em">
                 <h2 class="CGreen">Formazione</h2>
                 <div class="WithLineContainer">
                         <div class="line BgGreen"></div>
@@ -79,13 +81,16 @@
                             <h3 class="CGreen">Ristorante Locanda Alla Collegiata - 2022</h3>
                             <p>Via Cardinal Branda Castiglioni 1, 21043 Castiglione Olona (VA), Italia.<br>A partire da gennaio 2022 ho potuto lavorare, presso il ristorante Locanda Alla Collegiata di Castiglione Olona, come cameriere.</p>
                         </div>
+                </div>
+            </div>
             </div>
         </section>
         <section style="BlurSect" id="DevelopperSection">
                 <div class="spacerUp"></div>
-                <hr>
+                <hr class="startScrollAlign">
                 <div class="spacerDown"></div>
-            <div class="sectionContainer">
+            <div class="flexBoxCenter">
+            <div class="sectionContainer maxWidt60Em">
                 <h2 class="CBlue">Conoscenze informatiche</h2>
                 <div class="WithLineContainer">
                         <div class="line BgBlue"></div>
@@ -122,12 +127,14 @@
                         </div>
                 </div>
             </div>
+            </div>
         </section>
         <section style="BlurSect" id="AboutMeSection">
                 <div class="spacerUp"></div>
-                <hr>
+                <hr class="startScrollAlign">
                 <div class="spacerDown"></div>
-            <div class="sectionContainer">
+            <div class="flexBoxCenter">
+            <div class="sectionContainer maxWidt60Em">
                 <h2 class="COrange">Info e contatti</h2>
                 <div class="centerContainer">
                 <div class="WithLineContainer">
@@ -148,6 +155,7 @@
                             <div class="StatusIndicatorContainer BoOrange" id="ItaSpokenLang"><div class="StatusIndicator Status100perc CWhite StatusIsForCode">Madrelingua</div></div>
                             <div class="StatusIndicatorContainer BoOrange" id="EngSpokenLang"><div class="StatusIndicator Status100perc CWhite StatusIsForCode">B2</div></div>
                             <div class="StatusIndicatorContainer BoOrange" id="FraSpokenLang"><div class="StatusIndicator Status75perc CWhite StatusIsForCode">B1</div></div>
+                            <div class="StatusIndicatorContainer BoOrange" id="DeSpokenLang"><div class="StatusIndicator Status25perc CWhite StatusIsForCode">A1</div></div>
                         </div>
                 </div>
                 <div class="WithLineContainer Mtop2">
@@ -158,9 +166,10 @@
                         </div>
                 </div>
             </div>
-                    <div class="spacerUp"></div>
-                    <hr>
-                    <div class="spacerDown"></div>
+            </div>
+            <div class="spacerUp"></div>
+            <hr>
+            <div class="spacerDown"></div>
         </section>
 
     </div>

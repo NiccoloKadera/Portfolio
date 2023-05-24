@@ -51,11 +51,11 @@ window.addEventListener('scroll', () => {
         Header.classList.add('headerUnactive')
     }
 
-    if (Math.ceil(scrolled) >= (documentHeight * 0.757197364) && documentHeight != 0) {
+    if (Math.ceil(scrolled) >= (documentHeight * 0.79) && documentHeight != 0) {
         backToTop.classList.add('AnimateBackToTopEnd')
     }
 
-    if (Math.ceil(scrolled) <= (documentHeight * 0.757197364) && documentHeight != 0) {
+    if (Math.ceil(scrolled) <= (documentHeight * 0.79) && documentHeight != 0) {
         backToTop.classList.remove('AnimateBackToTopEnd')
     }
 });
