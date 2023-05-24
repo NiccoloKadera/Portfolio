@@ -888,7 +888,7 @@ hr {
 
 .slidingToTopAnimation {
     opacity: 0;
-    bottom: 14em;
+    bottom: 15em;
     transition: 1s;
     transform: scale(2) translate(-30%);
 }
