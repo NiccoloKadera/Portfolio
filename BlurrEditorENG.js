@@ -3,6 +3,7 @@ var Backgoud = true
 var InputBG = document.getElementById("InputMode")
 var InputENG = document.getElementById("InputLangENG")
 const backToTop = document.getElementById("BackToTop")
+const Header = document.getElementById("HeaderID")
 
 var blurr = document.getElementById("BgBlurr")
 
@@ -36,6 +37,8 @@ window.addEventListener('scroll', () => {
         document.getElementById("InputMode").style.display = "none"
         backToTop.classList.remove('BackToTopHidden')
         backToTop.classList.add('BackToTopVisible')
+        Header.classList.remove('headerUnactive')
+        Header.classList.add('headerActive')
     }
     if (Math.ceil(scrolled) <= 250) {
         document.getElementById("BgBlurr").classList.remove('OpOne');
@@ -43,6 +46,8 @@ window.addEventListener('scroll', () => {
         document.getElementById("InputMode").style.display = "block"
         backToTop.classList.remove('BackToTopVisible')
         backToTop.classList.add('BackToTopHidden')
+        Header.classList.remove('headerActive')
+        Header.classList.add('headerUnactive')
     }
 
     if (Math.ceil(scrolled) >= (documentHeight - 1150) && documentHeight != 0) {

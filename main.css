@@ -2,6 +2,7 @@
     --xMargin: 5em;
     --yMargin: 3em;
     --backgroundColor: rgb(233 233 233);
+    --backgroundColor075: rgb(233, 233, 233, 0.75);
     --NotificationColor: rgb(0, 0, 0);
     --NotificationTextColor: rgb(255, 255, 255);
     --green: rgb(76, 183, 149);
@@ -21,6 +22,7 @@
     --FontWheight-Light: 300;
     --FontSizeH1: 4em;
     --FontSizeH2: 3em;
+    --FontSizeHeader: 1.5em;
     --FontSizeH3: 2em;
     --FontSizeP: 1em;
     --FontSizeText: 1em;
@@ -311,6 +313,12 @@ h2 {
     }
 }
 @keyframes textPop2 {
+    0% {transform: translate(0em, 0em);
+    }
+    15% {transform: translate(0.2em, 0em);
+    }
+    30% {transform: translate(0em, 0em);
+    }
     35% {transform: scale(1);
     }
     50% {transform: scale(1.05) translate(0.2em, -0.1em);
@@ -580,6 +588,7 @@ ul {
     :root {
         --FontSizeH1: 3em;
         --FontSizeH2: 2em;
+        --FontSizeHeader: 1em;
         --FontSizeText: 1em;
         --FontSizeH3: 1.5em;
         --xMargin: 3em;
@@ -622,6 +631,7 @@ ul {
     }
 }
 
+
 @media screen and (max-width: 365px) {
     :root {
         --FontSizeH1: 2.3em;
@@ -638,6 +648,12 @@ ul {
     }
     .notification {
         padding: 0.5em 0.8em 0.5em 0.8em; 
+    }
+}
+
+@media screen and (max-width: 300px) {
+    :root {
+        --FontSizeHeader: 0.8em;
     }
 }
 
@@ -772,6 +788,7 @@ hr {
     position: fixed;
     left: 50%;
     transition: 0.5s;
+    -webkit-touch-callout: none;
 }
 
 @media screen and (min-width: 1000px) {
@@ -843,4 +860,75 @@ hr {
     bottom: 14em;
     transition: 1s;
     transform: scale(2) translate(-30%);
+}
+
+.header {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3em;
+    background-color: var(--whiteNotFull);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--FontName), var(--FontFamily);
+    font-weight: var(--FontWheight-ExtraBold);
+    font-size: var(--FontSizeHeader);
+    transition: 0.5s;
+    -webkit-touch-callout: none;
+}
+
+.headerUnactive {
+    width: 40%;
+    top: -5em;
+    left: 30%;
+    border-radius: 0em 0em 3em 3em;
+    background-color: var(--white);
+    box-shadow: 0em 0em 1em rgba(82, 82, 82, 0.622);
+}
+
+.headerActive {
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0em;
+    border: solid var(--black) 0em;
+    box-shadow: 0em 0em 0em rgba(82, 82, 82, 0.622);
+}
+
+.headerElement {
+    margin-left: 0.1em;
+    margin-right: 0.15em;
+    transition: 0.5s;
+}
+
+#ZeroProfessionHeader {
+    color: var(--orange);
+}
+
+#FirstProfessionHeader {
+    color: var(--green);
+}
+
+#SecondProfessionHeader {
+    color: var(--blue);
+}
+
+@media screen and (max-width: 1000px) {
+    .headerElement:hover {
+        transform: scale(1.1);
+        padding-left: 0.4em;
+        padding-right: 0.4em;
+        transition: 0.2s;
+    }
+}
+
+.headerElement:active {
+    transform: scale(0.9);
+    opacity: 0.8;
+    transition: 0.2s;
 }
