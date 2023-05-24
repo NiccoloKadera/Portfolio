@@ -22,7 +22,7 @@ backToTop.addEventListener("click", function(){
     setTimeout(function () {
         backToTop.classList.remove('slidingToTopAnimation')
         backToTop.classList.add('BackToTopHidden')
-    }, 800);
+    }, 700);
 })
 
 // Positon handler
