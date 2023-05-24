@@ -6,18 +6,38 @@ const backToTop = document.getElementById("BackToTop")
 
 var blurr = document.getElementById("BgBlurr")
 
+var body = document.body,
+    html = document.documentElement;
+
+var documentHeight = 0
+
+setTimeout(function calculateHeight() {
+    documentHeight = Math.max( body.scrollHeight, body.offsetHeight, 
+        html.clientHeight, html.scrollHeight, html.offsetHeight )
+}, 4000);
+
+// Back To top sliding animation
+backToTop.addEventListener("click", function(){
+    backToTop.classList.add('slidingToTopAnimation')
+    setTimeout(function () {
+        backToTop.classList.remove('slidingToTopAnimation')
+        backToTop.classList.add('BackToTopHidden')
+    }, 180);
+})
+
+// Positon handler
 window.addEventListener('scroll', () => {
 
     const scrolled = document.documentElement.scrollTop;
 
-    if (Math.ceil(scrolled) >= 300) {
+    if (Math.ceil(scrolled) >= 250) {
         document.getElementById("BgBlurr").classList.remove('OpZero');
         document.getElementById("BgBlurr").classList.add('OpOne');
         document.getElementById("InputMode").style.display = "none"
         backToTop.classList.remove('BackToTopHidden')
         backToTop.classList.add('BackToTopVisible')
     }
-    if (Math.ceil(scrolled) <= 300) {
+    if (Math.ceil(scrolled) <= 250) {
         document.getElementById("BgBlurr").classList.remove('OpOne');
         document.getElementById("BgBlurr").classList.add('OpZero');
         document.getElementById("InputMode").style.display = "block"
@@ -25,10 +45,17 @@ window.addEventListener('scroll', () => {
         backToTop.classList.add('BackToTopHidden')
     }
 
-    
+    if (Math.ceil(scrolled) >= (documentHeight - 1150) && documentHeight != 0) {
+        backToTop.classList.add('AnimateBackToTopEnd')
+    }
+
+    if (Math.ceil(scrolled) <= (documentHeight - 1150) && documentHeight != 0) {
+        backToTop.classList.remove('AnimateBackToTopEnd')
+    }
 });
 
-InputBG.addEventListener("click", e => {
+// Background handler
+function backGroundActivator() {
     if (Backgoud) {
         Backgoud = false
         var BackgoudTxt = "on"
@@ -44,6 +71,10 @@ InputBG.addEventListener("click", e => {
     }
 
     document.getElementById("LearnMore").innerHTML = "Low power mode: " + BackgoudTxt
+}
+
+InputBG.addEventListener("click", e => {
+    backGroundActivator()
 })
 
 InputENG.addEventListener("click", e => {

@@ -6,6 +6,26 @@ const backToTop = document.getElementById("BackToTop")
 
 var blurr = document.getElementById("BgBlurr")
 
+var body = document.body,
+    html = document.documentElement;
+
+var documentHeight = 0
+
+setTimeout(function calculateHeight() {
+    documentHeight = Math.max( body.scrollHeight, body.offsetHeight, 
+        html.clientHeight, html.scrollHeight, html.offsetHeight )
+}, 4000);
+
+// Back To top sliding animation
+backToTop.addEventListener("click", function(){
+    backToTop.classList.add('slidingToTopAnimation')
+    setTimeout(function () {
+        backToTop.classList.remove('slidingToTopAnimation')
+        backToTop.classList.add('BackToTopHidden')
+    }, 180);
+})
+
+// Positon handler
 window.addEventListener('scroll', () => {
 
     const scrolled = document.documentElement.scrollTop;
@@ -25,10 +45,17 @@ window.addEventListener('scroll', () => {
         backToTop.classList.add('BackToTopHidden')
     }
 
-    
+    if (Math.ceil(scrolled) >= (documentHeight - 1150) && documentHeight != 0) {
+        backToTop.classList.add('AnimateBackToTopEnd')
+    }
+
+    if (Math.ceil(scrolled) <= (documentHeight - 1150) && documentHeight != 0) {
+        backToTop.classList.remove('AnimateBackToTopEnd')
+    } 
 });
 
-InputBG.addEventListener("click", e => {
+// Background handler
+function backGroundActivator() {
     if (Backgoud) {
         Backgoud = false
         var BackgoudTxt = "on"
@@ -44,6 +71,10 @@ InputBG.addEventListener("click", e => {
     }
 
     document.getElementById("LearnMore").innerHTML = "Basse prestazioni: " + BackgoudTxt
+}
+
+InputBG.addEventListener("click", e => {
+    backGroundActivator()
 })
 
 InputITA.addEventListener("click", e => {
