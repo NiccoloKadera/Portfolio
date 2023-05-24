@@ -45,7 +45,7 @@ button {
 html {
     scroll-behavior: smooth;
     background-color: var(--white);
-    scroll-snap-type: y proximity;
+    /* scroll-snap-type: y proximity; */
 }
 
 body {
@@ -117,15 +117,20 @@ spline-viewer {
     transition: 0.2s;
 }
 
+/* 
 .startScrollAlign {
     scroll-snap-align: start;
 }
+*/
 
 .firstSnapScrollHR {
+    /*
     position: fixed;
     top: 0;
     left: 0;
     opacity: 0;
+    */
+    display: none;
 }
 
 #titleSectionContainer {
