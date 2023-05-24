@@ -146,7 +146,8 @@ h2 {
 }
 
 #ZeroProfession {
-    max-width: 2em;
+    max-width: fit-content;
+    max-width: -moz-fit-content;
     margin-top: -2em;
     pointer-events: auto;
     color: var(--orange);
@@ -161,7 +162,8 @@ h2 {
 }
 
 #FirstProfession {
-    max-width: 5em;
+    max-width: fit-content;
+    max-width: -moz-fit-content;
     margin-left: 2em;
     pointer-events: auto;
     margin-top: -1.65em;
@@ -170,9 +172,9 @@ h2 {
     textPop2 3s 4s infinite;
     transition: 1s;
 }
-
 #FirstProfessionITA {
-    max-width: 5em;
+    max-width: fit-content;
+    max-width: -moz-fit-content;
     margin-left: 2.8em;
     pointer-events: auto;
     margin-top: -1.65em;
@@ -188,7 +190,8 @@ h2 {
 }
 
 #SecondProfession {
-    max-width: 6.5em;
+    max-width: fit-content;
+    max-width: -moz-fit-content;
     margin-top: -2em;
     pointer-events: auto;
     color: var(--blue);
@@ -837,6 +840,7 @@ hr {
 
 .slidingToTopAnimation {
     opacity: 0;
-    bottom: 7em;
+    bottom: 14em;
     transition: 1s;
+    transform: scale(2) translate(-30%);
 }
