@@ -883,12 +883,12 @@ hr {
 }
 
 .headerUnactive {
-    width: 40%;
+    width: 20%;
     top: -5em;
-    left: 30%;
-    border-radius: 0em 0em 3em 3em;
+    left: 40%;
+    border-radius: 3em;
     background-color: var(--white);
-    box-shadow: 0em 0em 1em rgba(82, 82, 82, 0.622);
+    box-shadow: 0em 0em 0em rgb(233, 233, 233, 0);
 }
 
 .headerActive {
@@ -897,7 +897,7 @@ hr {
     width: 100%;
     border-radius: 0em;
     border: solid var(--black) 0em;
-    box-shadow: 0em 0em 0em rgba(82, 82, 82, 0.622);
+    animation: HeaderAcivatedShadow 0.75s 0s both;
 }
 
 .headerElement {
@@ -918,7 +918,7 @@ hr {
     color: var(--blue);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 1000px) {
     .headerElement:hover {
         transform: scale(1.1);
         padding-left: 0.4em;
@@ -931,4 +931,13 @@ hr {
     transform: scale(0.9);
     opacity: 0.8;
     transition: 0.2s;
+}
+
+@keyframes HeaderAcivatedShadow{
+    0% {box-shadow: 0em 0em 0em var(--orange);}
+    1% {box-shadow: 0em 0em 2em var(--orange);}
+    35% {box-shadow: 0em 0em 2em var(--orange);}
+    70% {box-shadow: 0em 0em 2em var(--green);}
+    95% {box-shadow: 0em 0em 2em var(--blue);}
+    100% {box-shadow: 0em 0em 0em var(--blue);}
 }
