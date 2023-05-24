@@ -5,6 +5,7 @@ var InputENG = document.getElementById("InputLangENG")
 const backToTop = document.getElementById("BackToTop")
 const Header = document.getElementById("HeaderID")
 
+// Calculating document height
 var blurr = document.getElementById("BgBlurr")
 
 var body = document.body,
@@ -50,11 +51,11 @@ window.addEventListener('scroll', () => {
         Header.classList.add('headerUnactive')
     }
 
-    if (Math.ceil(scrolled) >= (documentHeight - 1300) && documentHeight != 0) {
+    if (Math.ceil(scrolled) >= (documentHeight * 0.757197364) && documentHeight != 0) {
         backToTop.classList.add('AnimateBackToTopEnd')
     }
 
-    if (Math.ceil(scrolled) <= (documentHeight - 1300) && documentHeight != 0) {
+    if (Math.ceil(scrolled) <= (documentHeight * 0.757197364) && documentHeight != 0) {
         backToTop.classList.remove('AnimateBackToTopEnd')
     }
 });
