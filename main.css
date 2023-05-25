@@ -183,12 +183,22 @@ h2 {
     color: var(--orange);
     animation: disolve 1s calc(var(--InitialDelay) + 2s) both,
     textPop1 5s 4s infinite;
-    transition: 1s;
 }
 
-#ZeroProfession:hover {
-    font-size: 1.1em;
+.ProfessionElement {
     transition: 0.5s;
+}
+
+@media screen and (min-width: 1000px) {
+.ProfessionElement:hover {
+    font-size: 1.1em;
+    transition: 0.2s;
+}
+}
+
+.ProfessionElement:active {
+    font-size: 1.1em;
+    transition: 0.2s;
 }
 
 #FirstProfession {
@@ -200,7 +210,6 @@ h2 {
     color: var(--green);
     animation: disolve 1s calc(var(--InitialDelay) + 2.4s) both,
     textPop2 5s 4s infinite;
-    transition: 1s;
 }
 #FirstProfessionITA {
     max-width: fit-content;
@@ -211,13 +220,9 @@ h2 {
     color: var(--green);
     animation: disolve 1s calc(var(--InitialDelay) + 2.4s) both,
     textPop2 5s 4s infinite;
-    transition: 1s;
 }
 
-#FirstProfession:hover {
-    font-size: 1.1em;
-    transition: 0.5s;
-}
+
 
 #SecondProfession {
     max-width: fit-content;
@@ -227,13 +232,8 @@ h2 {
     color: var(--blue);
     animation: disolve 1s calc(var(--InitialDelay) + 2.8s) both,
     textPop3 5s 4s infinite;
-    transition: 1s;
 }
 
-#SecondProfession:hover {
-    font-size: 1.1em;
-    transition: 0.5s;
-}
 
 @keyframes cursor {
     50% {border-color: transparent;}
@@ -630,7 +630,6 @@ ul {
     :root {
         --FontSizeH1: 3em;
         --FontSizeH2: 2em;
-        --FontSizeHeader: 1em;
         --FontSizeText: 1em;
         --FontSizeH3: 1.5em;
         --xMargin: 3em;
@@ -653,6 +652,12 @@ ul {
     }
     .notification {
         padding: 0.7em 1em 0.7em 1em; 
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    :root {
+        --FontSizeHeader: 5vw;
     }
   }
 
@@ -693,11 +698,7 @@ ul {
     }
 }
 
-@media screen and (max-width: 300px) {
-    :root {
-        --FontSizeHeader: 0.8em;
-    }
-}
+
 
 @media screen and (max-height: 1000px) {
     :root {
