@@ -28,6 +28,13 @@
     --FontSizeText: 1em;
     --InitialDelay: 2s;
     --PointerEffects: none;
+    --HeaderLetterAnimationDuration: 5s;
+    --HeaderLetterAnimationDelay: 4s;
+    --HeaderLetterAnimationDirection: both;
+    --HeaderLetterAnimationIterations: infinite;
+    --HeaderLetterAnimationScale: 1.1;
+    --HeaderLetterAnimationTranslateX: 0em;
+    --HeaderLetterAnimationTranslateY: -0.1em;
 }
 
 a {
@@ -175,7 +182,7 @@ h2 {
     pointer-events: auto;
     color: var(--orange);
     animation: disolve 1s calc(var(--InitialDelay) + 2s) both,
-    textPop1 3s 4s infinite;
+    textPop1 5s 4s infinite;
     transition: 1s;
 }
 
@@ -192,7 +199,7 @@ h2 {
     margin-top: -1.65em;
     color: var(--green);
     animation: disolve 1s calc(var(--InitialDelay) + 2.4s) both,
-    textPop2 3s 4s infinite;
+    textPop2 5s 4s infinite;
     transition: 1s;
 }
 #FirstProfessionITA {
@@ -203,7 +210,7 @@ h2 {
     margin-top: -1.65em;
     color: var(--green);
     animation: disolve 1s calc(var(--InitialDelay) + 2.4s) both,
-    textPop2 3s 4s infinite;
+    textPop2 5s 4s infinite;
     transition: 1s;
 }
 
@@ -219,7 +226,7 @@ h2 {
     pointer-events: auto;
     color: var(--blue);
     animation: disolve 1s calc(var(--InitialDelay) + 2.8s) both,
-    textPop3 3s 4s infinite;
+    textPop3 5s 4s infinite;
     transition: 1s;
 }
 
@@ -328,31 +335,33 @@ h2 {
 @keyframes textPop1 {
     0% {transform: scale(1);
     }
-    15% {transform: scale(1.05) translate(0.2em, -0.1em);
+    4% {transform: scale(1.05) translate(0.2em, -0.1em);
     }
-    30% {transform: scale(1);
+    12% {transform: scale(1);
     }
 }
 @keyframes textPop2 {
     0% {transform: translate(0em, 0em);
     }
-    15% {transform: translate(0.2em, 0em);
+    4% {transform: translate(0.2em, 0em);
     }
-    30% {transform: translate(0em, 0em);
+    10% {transform: scale(1) translate(0em, 0em);
     }
-    35% {transform: scale(1);
+    16% {transform: scale(1.05) translate(0.2em, -0.1em);
     }
-    50% {transform: scale(1.05) translate(0.2em, -0.1em);
+    31% {transform: scale(1.05) translate(0.2em, -0.1em);
     }
-    65% {transform: scale(1);
+    36% {transform: scale(1);
     }
 }
 @keyframes textPop3 {
+    34% {transform: scale(1);
+    }
+    39% {transform: scale(1.05) translate(0.2em, 0.1em);
+    }
+    65% {transform: scale(1.05) translate(0.2em, 0.1em);
+    }
     70% {transform: scale(1);
-    }
-    85% {transform: scale(1.05) translate(0.2em, 0.1em);
-    }
-    100% {transform: scale(1);
     }
 }
 
@@ -967,4 +976,388 @@ hr {
     70% {box-shadow: 0em 0em 2em var(--green);}
     95% {box-shadow: 0em 0em 2em var(--blue);}
     100% {box-shadow: 0em 0em 0em var(--blue);}
+}
+
+.headerLetter {
+    display: inline-block;
+    animation-duration: var(--HeaderLetterAnimationDuration);
+    animation-delay: var(--HeaderLetterAnimationDelay);
+    animation-direction: var(--HeaderLetterAnimationDirection);
+    animation-iteration-count: var(--HeaderLetterAnimationIterations);
+}
+
+#HL1 {
+    animation-name: HL1A;
+}
+
+@keyframes HL1A {
+    0% {transform: scale(1) translate(0em, 0em);}
+    1% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    2% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    13% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL2 {
+    animation-name: HL2A;
+}
+
+@keyframes HL2A {
+    0% {}
+    1% {transform: scale(1) translate(0em, 0em);}
+    3% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    4% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    15% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL3 {
+    animation-name: HL3A;
+}
+
+@keyframes HL3A {
+    0% {}
+    3% {transform: scale(1) translate(0em, 0em);}
+    5% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    6% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    17% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL4 {
+    animation-name: HL4A;
+}
+
+@keyframes HL4A {
+    0% {}
+    5% {transform: scale(1) translate(0em, 0em);}
+    7% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    8% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    19% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL5 {
+    animation-name: HL5A;
+}
+
+@keyframes HL5A {
+    0% {}
+    9% {transform: scale(1) translate(0em, 0em);}
+    11% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    12% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    23% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL6 {
+    animation-name: HL6A;
+}
+
+@keyframes HL6A {
+    0% {}
+    11% {transform: scale(1) translate(0em, 0em);}
+    13% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    14% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    25% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL7 {
+    animation-name: HL7A;
+}
+
+@keyframes HL7A {
+    0% {}
+    12% {transform: scale(1) translate(0em, 0em);}
+    15% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    16% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    27% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL8 {
+    animation-name: HL8A;
+}
+
+@keyframes HL8A {
+    0% {}
+    17% {transform: scale(1) translate(0em, 0em);}
+    19% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    20% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    31% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL9 {
+    animation-name: HL9A;
+}
+
+@keyframes HL9A {
+    0% {}
+    19% {transform: scale(1) translate(0em, 0em);}
+    21% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    22% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    33% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL10 {
+    animation-name: HL10A;
+}
+
+@keyframes HL10A {
+    0% {}
+    21% {transform: scale(1) translate(0em, 0em);}
+    23% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    24% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    35% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL11 {
+    animation-name: HL11A;
+}
+
+@keyframes HL11A {
+    0% {}
+    23% {transform: scale(1) translate(0em, 0em);}
+    25% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    26% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    37% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL12 {
+    animation-name: HL12A;
+}
+
+@keyframes HL12A {
+    0% {}
+    25% {transform: scale(1) translate(0em, 0em);}
+    27% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    28% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    39% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL13 {
+    animation-name: HL13A;
+}
+
+@keyframes HL13A {
+    0% {}
+    27% {transform: scale(1) translate(0em, 0em);}
+    29% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    30% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    41% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL14 {
+    animation-name: HL14A;
+}
+
+@keyframes HL14A {
+    0% {}
+    29% {transform: scale(1) translate(0em, 0em);}
+    31% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    32% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    43% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL15 {
+    animation-name: HL15A;
+}
+
+@keyframes HL15A {
+    0% {}
+    30% {transform: scale(1) translate(0em, 0em);}
+    33% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    34% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    45% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL16 {
+    animation-name: HL16A;
+}
+
+@keyframes HL16A {
+    0% {}
+    34% {transform: scale(1) translate(0em, 0em);}
+    37% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    38% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    49% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL17 {
+    animation-name: HL17A;
+}
+
+@keyframes HL17A {
+    0% {}
+    39% {transform: scale(1) translate(0em, 0em);}
+    41% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    42% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    53% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL18 {
+    animation-name: HL18A;
+}
+
+@keyframes HL18A {
+    0% {}
+    41% {transform: scale(1) translate(0em, 0em);}
+    43% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    44% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    55% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL19 {
+    animation-name: HL19A;
+}
+
+@keyframes HL19A {
+    0% {}
+    43% {transform: scale(1) translate(0em, 0em);}
+    45% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    46% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    57% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL20 {
+    animation-name: HL20A;
+}
+
+@keyframes HL20A {
+    0% {}
+    46% {transform: scale(1) translate(0em, 0em);}
+    48% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    49% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    60% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL21 {
+    animation-name: HL21A;
+}
+
+@keyframes HL21A {
+    0% {}
+    48% {transform: scale(1) translate(0em, 0em);}
+    50% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    51% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    62% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL22 {
+    animation-name: HL22A;
+}
+
+@keyframes HL22A {
+    0% {}
+    50% {transform: scale(1) translate(0em, 0em);}
+    52% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    53% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    64% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL23 {
+    animation-name: HL23A;
+}
+
+@keyframes HL23A {
+    0% {}
+    52% {transform: scale(1) translate(0em, 0em);}
+    54% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    55% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    66% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL24 {
+    animation-name: HL24A;
+}
+
+@keyframes HL24A {
+    0% {}
+    54% {transform: scale(1) translate(0em, 0em);}
+    56% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    57% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    68% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL25 {
+    animation-name: HL25A;
+}
+
+@keyframes HL25A {
+    0% {}
+    57% {transform: scale(1) translate(0em, 0em);}
+    59% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    60% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    71% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL26 {
+    animation-name: HL26A;
+}
+
+@keyframes HL26A {
+    0% {}
+    59% {transform: scale(1) translate(0em, 0em);}
+    61% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    62% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    73% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL27 {
+    animation-name: HL27A;
+}
+
+@keyframes HL27A {
+    0% {}
+    61% {transform: scale(1) translate(0em, 0em);}
+    63% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    64% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    75% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL28 {
+    animation-name: HL28A;
+}
+
+@keyframes HL28A {
+    0% {}
+    63% {transform: scale(1) translate(0em, 0em);}
+    65% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    66% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    77% {transform: scale(1) translate(0em, 0em);}
+    100% {}
+}
+
+#HL29 {
+    animation-name: HL29A;
+}
+
+@keyframes HL29A {
+    0% {}
+    66% {transform: scale(1) translate(0em, 0em);}
+    67% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    68% {transform: scale(var(--HeaderLetterAnimationScale)) translate(var(--HeaderLetterAnimationTranslateX), var(--HeaderLetterAnimationTranslateY));}
+    79% {transform: scale(1) translate(0em, 0em);}
+    100% {}
 }
