@@ -35,7 +35,7 @@
     --HeaderLetterAnimationScale: 1.1;
     --HeaderLetterAnimationTranslateX: 0em;
     --HeaderLetterAnimationTranslateY: -0.1em;
-    --overallAnimationEnterTransition: 1s;
+    --overallAnimationEnterTransition: 0.75s;
     --overallAnimationExitTransition: 0.5s;
 }
 
@@ -391,7 +391,7 @@ h2 {
     max-width: 1em;
     border-radius: 2em;
     transition: var(--overallAnimationExitTransition);
-    transform: scale(1.2) translate(-1em, 0em);
+    transform: scale(0.90) translate(-1em, 0);
     opacity: 0;
 }
 
@@ -410,7 +410,7 @@ h2 {
         max-width: 1em;
         border-radius: 2em;
         transition: var(--overallAnimationExitTransition);
-        transform: scale(0.575) translate(-10vw, 0em);
+        transform: scale(0.9) translate(-4vw, 0);
         opacity: 0;
     }
 }
@@ -423,6 +423,19 @@ h2 {
 }
 
 .H3Active {
+    transform: scale(1) translate(0em);
+    opacity: 1;
+    transition: var(--overallAnimationEnterTransition);
+}
+
+.PUnactive {
+    transform: scale(0.70) translate(-10vw);
+    opacity: 0;
+    transform: 2s;
+    transition: var(--overallAnimationExitTransition);
+}
+
+.PActive {
     transform: scale(1) translate(0em);
     opacity: 1;
     transition: var(--overallAnimationEnterTransition);

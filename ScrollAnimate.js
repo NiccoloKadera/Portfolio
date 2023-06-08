@@ -85,10 +85,26 @@ const H3Observer = new IntersectionObserver((entries) => {
     });
 });
 
+const PObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('PActive')
+                entry.target.classList.remove('PUnactive')
+            } else {
+                entry.target.classList.add('PUnactive')
+                entry.target.classList.remove('PActive')
+            }
+    });
+});
+
+
 hiddenElementsH3.forEach((el) => H3Observer.observe(el))
-hiddenElementsP.forEach((el) => H3Observer.observe(el))
+hiddenElementsP.forEach((el) => PObserver.observe(el))
 hiddenElementsSIC.forEach((el) => H3Observer.observe(el))
 
 
 const hiddenElementsSI = document.querySelectorAll('.StatusIndicator')
 hiddenElementsSI.forEach((el) => GenericObserver.observe(el))
+
+const hiddenElementsMEI = document.querySelectorAll('.MeInfo')
+hiddenElementsMEI.forEach((el) => H3Observer.observe(el))
