@@ -404,7 +404,20 @@ h2 {
     opacity: 1;
 }
 
-@media screen and (max-width: 500px) {
+.PUnactive {
+    transform: scale(0.85) translate(-6.5em);
+    opacity: 0;
+    transform: 2s;
+    transition: var(--overallAnimationExitTransition);
+}
+
+.PActive {
+    transform: scale(1) translate(0em);
+    opacity: 1;
+    transition: var(--overallAnimationEnterTransition);
+}
+
+@media screen and (max-width: 550px) {
     .line {
         flex: 1;
         max-width: 1em;
@@ -412,6 +425,12 @@ h2 {
         transition: var(--overallAnimationExitTransition);
         transform: scale(0.9) translate(-4vw, 0);
         opacity: 0;
+    }
+    .PUnactive {
+        transform: scale(0.85) translate(-15vw);
+        opacity: 0;
+        transform: 2s;
+        transition: var(--overallAnimationExitTransition);
     }
 }
 
@@ -428,18 +447,7 @@ h2 {
     transition: var(--overallAnimationEnterTransition);
 }
 
-.PUnactive {
-    transform: scale(0.70) translate(-10vw);
-    opacity: 0;
-    transform: 2s;
-    transition: var(--overallAnimationExitTransition);
-}
 
-.PActive {
-    transform: scale(1) translate(0em);
-    opacity: 1;
-    transition: var(--overallAnimationEnterTransition);
-}
 
 
 .WithLineContentContainer {
