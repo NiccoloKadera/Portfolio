@@ -35,6 +35,8 @@
     --HeaderLetterAnimationScale: 1.1;
     --HeaderLetterAnimationTranslateX: 0em;
     --HeaderLetterAnimationTranslateY: -0.1em;
+    --overallAnimationEnterTransition: 1s;
+    --overallAnimationExitTransition: 0.5s;
 }
 
 a {
@@ -388,12 +390,69 @@ h2 {
     flex: 1;
     max-width: 1em;
     border-radius: 2em;
+    transition: var(--overallAnimationExitTransition);
+    transform: scale(1.2) translate(-1em, 0em);
+    opacity: 0;
 }
 
-.WithLineContentContainer{
+.lineActive {
+    flex: 1;
+    max-width: 1em;
+    border-radius: 2em;
+    transition: var(--overallAnimationEnterTransition);
+    transform: scale(1) translate(0em);
+    opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+    .line {
+        flex: 1;
+        max-width: 1em;
+        border-radius: 2em;
+        transition: var(--overallAnimationExitTransition);
+        transform: scale(0.575) translate(-10vw, 0em);
+        opacity: 0;
+    }
+}
+
+.H3Unactive {
+    transform: scale(0.95) translate(-2em);
+    opacity: 0;
+    transform: 2s;
+    transition: var(--overallAnimationExitTransition);
+}
+
+.H3Active {
+    transform: scale(1) translate(0em);
+    opacity: 1;
+    transition: var(--overallAnimationEnterTransition);
+}
+
+
+.WithLineContentContainer {
     flex: 1;
     background-color: none;
     margin-left: 1em;
+    transform: scale(1) translate(0em);
+    opacity: 1;
+    transition: var(--overallAnimationEnterTransition);
+    /*
+    flex: 1;
+    background-color: none;
+    margin-left: 1em;
+    transform: scale(0.5) translate(-20em);
+    opacity: 0;
+    transition: var(--overallAnimationExitTransition);
+    */
+}
+
+.WithLineContentContainerActive {
+    flex: 1;
+    background-color: none;
+    margin-left: 1em;
+    transform: scale(1) translate(0em);
+    opacity: 1;
+    transition: var(--overallAnimationEnterTransition);
 }
 
 h3 {
@@ -445,21 +504,51 @@ ul {
 .Status50perc {
     width: calc(50% - 0.30em);
     background-color: var(--yellow);
+    transition: var(--overallAnimationEnterTransition);
+}
+
+.Status50percHidden {
+    width: calc(25% - 0.30em);
+    background-color: var(--yellow);
+    transition: var(--overallAnimationExitTransition);
+    
 }
 
 .Status100perc {
     width: calc(100% - 0.30em);
     background-color: var(--green);
+    transition: var(--overallAnimationEnterTransition);
+}
+
+.Status100percHidden {
+    width: calc(50% - 0.30em);
+    background-color: var(--green);
+    transition: var(--overallAnimationExitTransition);
 }
 
 .Status25perc {
     width: calc(25% - 0.30em);
     background-color: var(--orange);
+    transition: var(--overallAnimationEnterTransition);
 }
+
+.Status25percHidden {
+    width: calc(12.5% - 0.30em);
+    background-color: var(--orange);
+    transition: var(--overallAnimationExitTransition);
+}
+
 
 .Status75perc {
     width: calc(75% - 0.30em);
     background-color: var(--yellow);
+    transition: var(--overallAnimationEnterTransition);
+}
+
+.Status75percHidden {
+    width: calc(37.5% - 0.30em);
+    background-color: var(--yellow);
+    transition: var(--overallAnimationExitTransition);
 }
 
 
