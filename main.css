@@ -37,6 +37,7 @@
     --HeaderLetterAnimationTranslateY: -0.1em;
     --overallAnimationEnterTransition: 0.75s;
     --overallAnimationExitTransition: 0.5s;
+    --overallAnimationBlurrAmount: 1em;
 }
 
 a {
@@ -393,6 +394,7 @@ h2 {
     transition: var(--overallAnimationExitTransition);
     transform: scale(0.90) translate(-1em, 0);
     opacity: 0;
+    
 }
 
 .lineActive {
@@ -402,6 +404,7 @@ h2 {
     transition: var(--overallAnimationEnterTransition);
     transform: scale(1) translate(0em);
     opacity: 1;
+    
 }
 
 .PUnactive {
@@ -409,12 +412,14 @@ h2 {
     opacity: 0;
     transform: 2s;
     transition: var(--overallAnimationExitTransition);
+    filter: blur(var(--overallAnimationBlurrAmount));
 }
 
 .PActive {
     transform: scale(1) translate(0em);
     opacity: 1;
     transition: var(--overallAnimationEnterTransition);
+    filter: blur(0px);
 }
 
 @media screen and (max-width: 550px) {
@@ -425,12 +430,14 @@ h2 {
         transition: var(--overallAnimationExitTransition);
         transform: scale(0.9) translate(-4vw, 0);
         opacity: 0;
+        filter: blur(var(--overallAnimationBlurrAmount));
     }
     .PUnactive {
         transform: scale(0.85) translate(-15vw);
         opacity: 0;
         transform: 2s;
         transition: var(--overallAnimationExitTransition);
+        filter: blur(var(--overallAnimationBlurrAmount));
     }
 }
 
@@ -439,12 +446,14 @@ h2 {
     opacity: 0;
     transform: 2s;
     transition: var(--overallAnimationExitTransition);
+    filter: blur(0.25em);
 }
 
 .H3Active {
     transform: scale(1) translate(0em);
     opacity: 1;
     transition: var(--overallAnimationEnterTransition);
+    filter: blur(0em);
 }
 
 
