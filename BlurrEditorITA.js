@@ -4,6 +4,7 @@ var InputBG = document.getElementById("InputMode")
 var InputITA = document.getElementById("InputLangITA")
 const backToTop = document.getElementById("BackToTop")
 const Header = document.getElementById("HeaderID")
+const BottomDisolveE = document.getElementById("BottomDisolveElement")
 
 // Calculating document height
 var blurr = document.getElementById("BgBlurr")
@@ -40,6 +41,8 @@ window.addEventListener('scroll', () => {
         backToTop.classList.add('BackToTopVisible')
         Header.classList.remove('headerUnactive')
         Header.classList.add('headerActive')
+        BottomDisolveE.classList.remove('bottomDisolveHidden')
+        BottomDisolveE.classList.add('bottomDisolveVisible')
     }
     if (Math.ceil(scrolled) <= 250) {
         document.getElementById("BgBlurr").classList.remove('OpOne');
@@ -49,6 +52,8 @@ window.addEventListener('scroll', () => {
         backToTop.classList.add('BackToTopHidden')
         Header.classList.remove('headerActive')
         Header.classList.add('headerUnactive')
+        BottomDisolveE.classList.add('bottomDisolveHidden')
+        BottomDisolveE.classList.remove('bottomDisolveVisible')
     }
 
     if (Math.ceil(scrolled) >= (documentHeight * 0.79) && documentHeight != 0) {

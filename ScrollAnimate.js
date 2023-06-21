@@ -1,59 +1,87 @@
+
+const AnimationDelay = 75;
+
+if (window.location.href == 'https://niccolokadera.github.io/Portfolio/' || window.location.href == 'https://niccolokadera.github.io/Portfolio/#') {
+    setTimeout(() => {
+        document.getElementById('PageContentContainerId').classList.remove('PageContentContainerHidden');
+        document.getElementById('PageContentContainerId').classList.add('PageContentContainerAll');
+    }, 2000);
+} else {
+    document.getElementById('PageContentContainerId').classList.remove('PageContentContainerHidden');
+    document.getElementById('PageContentContainerId').classList.add('PageContentContainerAll'); 
+}
+
+
+console.log(window.location.href + '<- Url')
+
 const GenericObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         var checkElement = entry.target.classList;
         if (String(checkElement).includes('line')  || String(checkElement).includes('lineActive') ) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('lineActive')
-                entry.target.classList.remove('line')
-            } else {
-                entry.target.classList.add('line')
-                entry.target.classList.remove('lineActive')
-            }
+            setTimeout(() => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('lineActive')
+                    entry.target.classList.remove('line')
+                } else {
+                    entry.target.classList.add('line')
+                    entry.target.classList.remove('lineActive')
+                }
+            }, AnimationDelay);
         }
         if (String(checkElement).includes('WithLineContentContainer')  || String(checkElement).includes('WithLineContentContainerActive') ) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('WithLineContentContainerActive')
-                entry.target.classList.remove('WithLineContentContainer')
-            } else {
-                entry.target.classList.add('WithLineContentContainer')
-                entry.target.classList.remove('WithLineContentContainerActive')
-            }
+            setTimeout(() => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('WithLineContentContainerActive')
+                    entry.target.classList.remove('WithLineContentContainer')
+                } else {
+                    entry.target.classList.add('WithLineContentContainer')
+                    entry.target.classList.remove('WithLineContentContainerActive')
+                }
+            }, AnimationDelay);
         }
         if (String(checkElement).includes('Status100perc')  || String(checkElement).includes('Status100percHidden') ) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('Status100perc')
-                entry.target.classList.remove('Status100percHidden')
-            } else {
-                entry.target.classList.add('Status100percHidden')
-                entry.target.classList.remove('Status100perc')
-            }
+            setTimeout(() => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('Status100perc')
+                    entry.target.classList.remove('Status100percHidden')
+                } else {
+                    entry.target.classList.add('Status100percHidden')
+                    entry.target.classList.remove('Status100perc')
+                }
+            }, AnimationDelay);
         }
         if (String(checkElement).includes('Status50perc')  || String(checkElement).includes('Status50percHidden') ) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('Status50perc')
-                entry.target.classList.remove('Status50percHidden')
-            } else {
-                entry.target.classList.add('Status50percHidden')
-                entry.target.classList.remove('Status50perc')
-            }
+            setTimeout(() => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('Status50perc')
+                    entry.target.classList.remove('Status50percHidden')
+                } else {
+                    entry.target.classList.add('Status50percHidden')
+                    entry.target.classList.remove('Status50perc')
+                }
+            }, AnimationDelay);
         }
         if (String(checkElement).includes('Status75perc')  || String(checkElement).includes('Status75percHidden') ) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('Status75perc')
-                entry.target.classList.remove('Status75percHidden')
-            } else {
-                entry.target.classList.add('Status75percHidden')
-                entry.target.classList.remove('Status75perc')
-            }
+            setTimeout(() => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('Status75perc')
+                    entry.target.classList.remove('Status75percHidden')
+                } else {
+                    entry.target.classList.add('Status75percHidden')
+                    entry.target.classList.remove('Status75perc')
+                }
+            }, AnimationDelay);
         }
         if (String(checkElement).includes('Status25perc')  || String(checkElement).includes('Status25percHidden') ) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('Status25perc')
-                entry.target.classList.remove('Status25percHidden')
-            } else {
-                entry.target.classList.add('Status25percHidden')
-                entry.target.classList.remove('Status25perc')
-            }
+            setTimeout(() => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('Status25perc')
+                    entry.target.classList.remove('Status25percHidden')
+                } else {
+                    entry.target.classList.add('Status25percHidden')
+                    entry.target.classList.remove('Status25perc')
+                }
+            }, AnimationDelay);
         }
     });
 });
@@ -75,6 +103,7 @@ const hiddenElementsP = document.querySelectorAll('p')
 
 const H3Observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
+        setTimeout(() => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('H3Active')
                 entry.target.classList.remove('H3Unactive')
@@ -82,11 +111,13 @@ const H3Observer = new IntersectionObserver((entries) => {
                 entry.target.classList.add('H3Unactive')
                 entry.target.classList.remove('H3Active')
             }
+        }, AnimationDelay);
     });
 });
 
 const PObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
+        setTimeout(() => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('PActive')
                 entry.target.classList.remove('PUnactive')
@@ -94,6 +125,7 @@ const PObserver = new IntersectionObserver((entries) => {
                 entry.target.classList.add('PUnactive')
                 entry.target.classList.remove('PActive')
             }
+        }, AnimationDelay);
     });
 });
 
