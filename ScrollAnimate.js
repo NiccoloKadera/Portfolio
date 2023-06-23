@@ -166,7 +166,6 @@ function PopUpOpen(idName) {
 
     document.getElementById(idPopUpParent).classList.remove('PopUpParentHidden');
     document.getElementById(idPopUpParent).classList.add('PopUpParentTransition');
-    console.log(document.getElementById(idPopUpParent).style.display)
     setTimeout(() => {
         document.getElementById(idPopUpParent).classList.remove('PopUpParentTransition');
         document.getElementById(idPopUpParent).classList.add('PopUpParent');
@@ -201,13 +200,13 @@ function PopUpClose(idName) {
 
 
 document.getElementById('OpenWMFPdf').addEventListener("click", e => {
-    console.log('OpenWMFPdf' + '   Close' + 'WMFPdf');
-    console.log(document.getElementById('CloseWMFPdf'))
     PopUpOpen('WMFPdf');
 });
 
 document.getElementById('CloseWMFPdf').addEventListener("click", e => {
-    console.log('CloseWMFPdf');
     PopUpClose('WMFPdf');
 });
 
+document.getElementById('PopUpParentWMFPdf').addEventListener("click", e => {
+    PopUpClose('WMFPdf');
+});
