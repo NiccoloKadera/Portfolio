@@ -1,7 +1,7 @@
 
 const AnimationDelay = 75;
 
-if (window.location.href == 'https://niccolokadera.github.io/Portfolio/' || window.location.href == 'https://niccolokadera.github.io/Portfolio/#') {
+if (window.location.href == 'https://niccolokadera.github.io/Portfolio/' || window.location.href == 'https://niccolokadera.github.io/Portfolio/#' || window.location.href == 'https://niccolokadera.github.io/Portfolio/index.html' || window.location.href == 'https://niccolokadera.github.io/Portfolio/index.html#'  || window.location.href == 'https://niccolokadera.github.io/Portfolio/indexEng.html'  || window.location.href == 'https://niccolokadera.github.io/Portfolio/indexEng.html#') {
     setTimeout(() => {
         document.getElementById('PageContentContainerId').classList.remove('PageContentContainerHidden');
         document.getElementById('PageContentContainerId').classList.add('PageContentContainerAll');
