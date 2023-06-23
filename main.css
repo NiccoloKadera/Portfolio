@@ -1632,6 +1632,7 @@ hr {
     min-width: 100%;
     border-radius: 1em;
     background-color: #FFFFFF;
+    object-fit: contain;
 }
 
 @media screen and ((max-width: 350px) or (max-height: 550px)) {
