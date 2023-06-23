@@ -190,7 +190,7 @@ function PopUpClose(idName) {
     setTimeout(() => {
         document.getElementById(idPopUpParent).classList.remove('PopUpParentTransition');
         document.getElementById(idPopUpParent).classList.add('PopUpParentHidden');
-    }, 1000);
+    }, 550);
 
     document.getElementById(idPopUpContainer).classList.remove('PopUpContainer');
     document.getElementById(idPopUpContainer).classList.add('PopUpContainerHidden');
