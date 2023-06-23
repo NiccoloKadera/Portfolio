@@ -1635,6 +1635,13 @@ hr {
     object-fit: contain;
 }
 
+@media screen and (min-width: 750px) {
+    .PDFVisualizer {
+        width: 60vw;
+        max-width: 50em;
+    }
+}
+
 @media screen and ((max-width: 350px) or (max-height: 550px)) {
     .PDFVisualizer {
         height: 15em;
