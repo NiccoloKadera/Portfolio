@@ -112,6 +112,7 @@ const hiddenElementsWLC = document.querySelectorAll('.WithLineContentContainer')
 const hiddenElementsSIC = document.querySelectorAll('.StatusIndicatorContainer')
 const hiddenElementsH3 = document.querySelectorAll('h3')
 const hiddenElementsP = document.querySelectorAll('p')
+const HiddenElementsSocial = document.querySelectorAll('.socialContainer')
 
 const H3Observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -145,7 +146,7 @@ const PObserver = new IntersectionObserver((entries) => {
 hiddenElementsH3.forEach((el) => H3Observer.observe(el))
 hiddenElementsP.forEach((el) => PObserver.observe(el))
 hiddenElementsSIC.forEach((el) => H3Observer.observe(el))
-
+HiddenElementsSocial.forEach((el) => PObserver.observe(el))
 
 const hiddenElementsSI = document.querySelectorAll('.StatusIndicator')
 hiddenElementsSI.forEach((el) => GenericObserver.observe(el))
@@ -161,9 +162,6 @@ function PopUpOpen(idName) {
     const idPopUpParent = 'PopUpParent' + idName;
     const idPopUpContainer = 'PopUpContainer' + idName;
 
-    document.getElementById(idClose).classList.remove('ClosePopUpParentHidden');
-    document.getElementById(idClose).classList.add('ClosePopUpParent');
-
     document.getElementById(idPopUpParent).classList.remove('PopUpParentHidden');
     document.getElementById(idPopUpParent).classList.add('PopUpParentTransition');
     setTimeout(() => {
@@ -171,8 +169,14 @@ function PopUpOpen(idName) {
         document.getElementById(idPopUpParent).classList.add('PopUpParent');
     }, 1);
 
-    document.getElementById(idPopUpContainer).classList.remove('PopUpContainerHidden');
-    document.getElementById(idPopUpContainer).classList.add('PopUpContainer');
+    setTimeout(() => {
+        document.getElementById(idClose).classList.remove('ClosePopUpParentHidden');
+        document.getElementById(idClose).classList.add('ClosePopUpParent');
+
+        document.getElementById(idPopUpContainer).classList.remove('PopUpContainerHidden');
+        document.getElementById(idPopUpContainer).classList.add('PopUpContainer');
+    }, 2);
+
 
     document.body.style.overflow = "hidden";
 };
