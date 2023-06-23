@@ -83,6 +83,17 @@ const GenericObserver = new IntersectionObserver((entries) => {
                 }
             }, AnimationDelay);
         }
+        if (String(checkElement).includes('OpenPopUpButton')  || String(checkElement).includes('OpenPopUpButtonHidden') ) {
+            setTimeout(() => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('OpenPopUpButton')
+                    entry.target.classList.remove('OpenPopUpButtonHidden')
+                } else {
+                    entry.target.classList.add('OpenPopUpButtonHidden')
+                    entry.target.classList.remove('OpenPopUpButton')
+                }
+            }, AnimationDelay);
+        }
     });
 });
 
@@ -90,7 +101,8 @@ const GenericObserver = new IntersectionObserver((entries) => {
 const hiddenElementsBar = document.querySelectorAll('.line')
 hiddenElementsBar.forEach((el) => GenericObserver.observe(el))
 
-
+const hiddenPopUpButton = document.querySelectorAll('.OpenPopUpButton')
+hiddenPopUpButton.forEach((el) => GenericObserver.observe(el))
 
 
 const hiddenElementsWLC = document.querySelectorAll('.WithLineContentContainer')
@@ -140,3 +152,62 @@ hiddenElementsSI.forEach((el) => GenericObserver.observe(el))
 
 const hiddenElementsMEI = document.querySelectorAll('.MeInfo')
 hiddenElementsMEI.forEach((el) => H3Observer.observe(el))
+
+
+
+/* Pop Up */
+function PopUpOpen(idName) {
+    const idClose = 'Close' + idName;
+    const idPopUpParent = 'PopUpParent' + idName;
+    const idPopUpContainer = 'PopUpContainer' + idName;
+
+    document.getElementById(idClose).classList.remove('ClosePopUpParentHidden');
+    document.getElementById(idClose).classList.add('ClosePopUpParent');
+
+    document.getElementById(idPopUpParent).classList.remove('PopUpParentHidden');
+    document.getElementById(idPopUpParent).classList.add('PopUpParentTransition');
+    console.log(document.getElementById(idPopUpParent).style.display)
+    setTimeout(() => {
+        document.getElementById(idPopUpParent).classList.remove('PopUpParentTransition');
+        document.getElementById(idPopUpParent).classList.add('PopUpParent');
+    }, 1);
+
+    document.getElementById(idPopUpContainer).classList.remove('PopUpContainerHidden');
+    document.getElementById(idPopUpContainer).classList.add('PopUpContainer');
+
+    document.body.style.overflow = "hidden";
+};
+
+function PopUpClose(idName) {
+    const idClose = 'Close' + idName;
+    const idPopUpParent = 'PopUpParent' + idName;
+    const idPopUpContainer = 'PopUpContainer' + idName;
+
+    document.getElementById(idClose).classList.remove('ClosePopUpParent');
+    document.getElementById(idClose).classList.add('ClosePopUpParentHidden');
+    
+    document.getElementById(idPopUpParent).classList.remove('PopUpParent');
+    document.getElementById(idPopUpParent).classList.add('PopUpParentTransition');
+    setTimeout(() => {
+        document.getElementById(idPopUpParent).classList.remove('PopUpParentTransition');
+        document.getElementById(idPopUpParent).classList.add('PopUpParentHidden');
+    }, 1000);
+
+    document.getElementById(idPopUpContainer).classList.remove('PopUpContainer');
+    document.getElementById(idPopUpContainer).classList.add('PopUpContainerHidden');
+
+    document.body.style.overflow = "visible";
+};
+
+
+document.getElementById('OpenWMFPdf').addEventListener("click", e => {
+    console.log('OpenWMFPdf' + '   Close' + 'WMFPdf');
+    console.log(document.getElementById('CloseWMFPdf'))
+    PopUpOpen('WMFPdf');
+});
+
+document.getElementById('CloseWMFPdf').addEventListener("click", e => {
+    console.log('CloseWMFPdf');
+    PopUpClose('WMFPdf');
+});
+
