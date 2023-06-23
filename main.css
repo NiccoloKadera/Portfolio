@@ -1630,7 +1630,7 @@ hr {
 .PDFVisualizer {
     height: 25em;
     min-width: 100%;
-    border-radius: 1em;
+    border-radius: 0.75em;
     background-color: #FFFFFF;
     object-fit: contain;
 }
@@ -1725,4 +1725,164 @@ hr {
     backdrop-filter: blur(0px); 
     transition: 0.5s;
     display: block;
+}
+
+.socialParent {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    margin-top: 0em;
+    margin-bottom: 2em;
+}
+
+.socialLogo {
+    height: 3em;
+    width: 3em;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 1em;
+}
+
+.socialContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border-radius: 1em;
+}
+
+@media screen and (min-width: 1000px) {
+    .socialContainer:hover {
+        transform: scale(1.1);
+        padding: 1em;
+        border-radius: 1em;
+        transition: 0.25s;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .socialContainer:hover .socialText {
+        color: #FFFFFF;
+        transition: 0.25s;
+    }
+
+    #InstagramContainer {
+        background-color: transparent;
+    }
+
+    #InstagramContainer:hover {
+        background-image: linear-gradient(to bottom left, #f92f5b, #fd8612);
+        background-color: #f93b2f;
+    }
+
+    #TwitterContainer {
+        background-color: transparent;
+    }
+
+    #TwitterContainer:hover {
+        background-image: linear-gradient(to bottom left, #1d9bf0, #6cb8ea);
+        background-color: #1d9bf0;
+    }
+
+    #LinkedinContainer {
+        background-color: transparent;
+    }
+
+    #LinkedinContainer:hover {
+        background-image: linear-gradient(to bottom left, #0474b3, #5195bc);
+        background-color: #0474b3;
+    }
+}
+
+.socialContainer:active {
+    transform: scale(0.9);
+    padding: 1em;
+    border-radius: 1em;
+    transition: 0.25s;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.socialContainer:active .socialText {
+    color: #FFFFFF;
+    transition: 0.25s;
+}
+
+#InstagramContainer {
+    background-color: transparent;
+}
+
+#InstagramContainer:active {
+    background-image: linear-gradient(to bottom left, #f92f5b, #fd8612);
+    background-color: #f93b2f;
+}
+
+#TwitterContainer {
+    background-color: transparent;
+}
+
+#TwitterContainer:active {
+    background-image: linear-gradient(to bottom left, #1d9bf0, #6cb8ea);
+    background-color: #1d9bf0;
+}
+
+#LinkedinContainer {
+    background-color: transparent;
+}
+
+#LinkedinContainer:active {
+    background-image: linear-gradient(to bottom left, #0474b3, #5195bc);
+    background-color: #0474b3;
+}
+
+.socialText {
+    margin-top: 0.5em;
+    margin-bottom: 0em;
+}
+
+#InstagramLogo {
+    background-image: url(/Portfolio/Img/Instagram.png);
+}
+
+#TwitterLogo {
+    background-image: url(/Portfolio/Img/Twitter.webp);
+}
+
+#LinkedinLogo {
+    background-image: url(/Portfolio/Img/Linkedin.png);
+}
+
+@media screen and (min-width: 650px) {
+    .socialParent {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .socialParent {
+        flex-direction: column;
+    }
+    .socialContainer {
+        flex-direction: row;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        width: fit-content;
+    }
+    .socialContainer:active {
+        margin-left: 0em;
+        margin-right: 0em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    .socialText {
+        margin-left: 0.5em;
+        margin-top: 0em;
+        margin-bottom: 0em;
+    }
 }
