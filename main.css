@@ -1838,6 +1838,15 @@ hr {
     background-color: #0474b3;
 }
 
+#FiverrContainer {
+    background-color: transparent;
+}
+
+#FiverrContainer:active {
+    background-image: linear-gradient(to bottom left, #04b361, #51bc6f);
+    background-color: #10b304;
+}
+
 .socialText {
     margin-top: 0.5em;
     margin-bottom: 0em;
@@ -1853,6 +1862,10 @@ hr {
 
 #LinkedinLogo {
     background-image: url(/Portfolio/Img/Linkedin.png);
+}
+
+#FiverrLogo {
+    background-image: url(/Portfolio/Img/Fiverr.png);
 }
 
 @media screen and (min-width: 650px) {
