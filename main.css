@@ -1627,7 +1627,7 @@ hr {
 }
 
 
-.PDFVisualizer {
+.Visualizer {
     height: 25em;
     min-width: 100%;
     border-radius: 0.75em;
@@ -1783,8 +1783,8 @@ hr {
     }
 
     #TwitterContainer:hover {
-        background-image: linear-gradient(to bottom left, #1d9bf0, #6cb8ea);
-        background-color: #1d9bf0;
+        background-image: linear-gradient(to bottom left, #3a3a3a, #4c4c4c);
+        background-color: #3b3b3b;
     }
 
     #LinkedinContainer {
@@ -1862,7 +1862,7 @@ hr {
 }
 
 #TwitterLogo {
-    background-image: url(/Portfolio/Img/Twitter.webp);
+    background-image: url(/Portfolio/Img/X.jpg);
 }
 
 #LinkedinLogo {

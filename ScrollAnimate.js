@@ -214,3 +214,15 @@ document.getElementById('CloseWMFPdf').addEventListener("click", e => {
 document.getElementById('PopUpParentWMFPdf').addEventListener("click", e => {
     PopUpClose('WMFPdf');
 });
+
+document.getElementById('OpenDigitiamo1').addEventListener("click", e => {
+    PopUpOpen('Digitiamo1');
+});
+
+document.getElementById('CloseDigitiamo1').addEventListener("click", e => {
+    PopUpClose('Digitiamo1');
+});
+
+document.getElementById('PopUpParentDigitiamo1').addEventListener("click", e => {
+    PopUpClose('Digitiamo1');
+});
